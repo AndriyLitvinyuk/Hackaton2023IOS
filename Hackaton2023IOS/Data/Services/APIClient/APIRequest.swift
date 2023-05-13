@@ -31,31 +31,30 @@ protocol APIRequest {
 }
 
 extension APIRequest {
-    
     var baseURL: URL? {
         return URL(string: "https://example.com")
     }
-    
+
     var headers: [String: String] {
         return ["Content-Type": "application/json"]
     }
-    
+
     func makeURLRequest() throws -> URLRequest {
         guard let url = baseURL?.appendingPathComponent(path) else {
             throw APIError.invalidURL
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
-        
+
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
-        
+
         if let body = body {
             request.httpBody = try JSONEncoder().encode(body)
         }
-        
+
         return request
     }
 }

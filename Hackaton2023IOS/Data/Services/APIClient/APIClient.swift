@@ -7,12 +7,12 @@
 import Foundation
 
 protocol APIClient {
-    
+
     func sendRequest<T: APIRequest>(_ request: T) async throws -> T.Response
 }
 
 final class URLSessionAPIClient: APIClient {
-    
+
     private let session: URLSession
 
     init(session: URLSession = .shared) {
