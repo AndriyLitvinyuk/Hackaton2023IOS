@@ -33,6 +33,7 @@ private extension ProfileViewController {
         tableView = ProfileTableView(frame: view.frame, style: .insetGrouped)
         if let tableView = tableView {
             profileViewControllerDataSource?.profileTableView = tableView
+            tableView.allowsSelection = false
             tableView.dataSource = profileViewControllerDataSource
             view.addSubview(tableView)
         }
