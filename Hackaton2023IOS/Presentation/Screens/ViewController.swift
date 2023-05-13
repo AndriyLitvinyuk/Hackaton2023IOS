@@ -11,9 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Example
+        let searchAnimation = SearchAnimationView(frame: .init(x: 0, y: 0, width: 400, height: 400))
+        searchAnimation.center = view.center
+        view.addSubview(searchAnimation)
+        searchAnimation.play()
     }
-
-
 }
-
