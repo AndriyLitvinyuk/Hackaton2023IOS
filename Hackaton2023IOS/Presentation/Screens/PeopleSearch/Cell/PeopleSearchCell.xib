@@ -14,9 +14,21 @@
             <rect key="frame" x="0.0" y="0.0" width="500" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cme-f4-ccC">
-                    <rect key="frame" x="0.0" y="59" width="500" height="187"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cme-f4-ccC">
+                    <rect key="frame" x="20" y="20" width="460" height="20.333333333333329"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5l-Z2-kP4">
+                    <rect key="frame" x="20" y="50.333333333333336" width="460" height="14.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skils" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as9-qb-hwS">
+                    <rect key="frame" x="20" y="74.666666666666671" width="460" height="14.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -24,14 +36,21 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Cme-f4-ccC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Bbi-g4-Ipt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Cme-f4-ccC" secondAttribute="bottom" id="CqA-4f-qLb"/>
-                <constraint firstItem="Cme-f4-ccC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="UpE-2A-8wD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cme-f4-ccC" secondAttribute="trailing" id="x6L-W8-F55"/>
+                <constraint firstItem="as9-qb-hwS" firstAttribute="top" secondItem="w5l-Z2-kP4" secondAttribute="bottom" constant="10" id="1wU-gX-NMM"/>
+                <constraint firstItem="Cme-f4-ccC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="3US-7K-dVr"/>
+                <constraint firstItem="Cme-f4-ccC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="7Ps-da-ut0"/>
+                <constraint firstItem="w5l-Z2-kP4" firstAttribute="top" secondItem="Cme-f4-ccC" secondAttribute="bottom" constant="10" id="C82-Ay-uqk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="as9-qb-hwS" secondAttribute="trailing" constant="20" id="CLT-Rs-PY0"/>
+                <constraint firstItem="as9-qb-hwS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="MKw-LH-Eta"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w5l-Z2-kP4" secondAttribute="trailing" constant="20" id="MZG-cP-dVM"/>
+                <constraint firstItem="w5l-Z2-kP4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="OhD-29-MJP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cme-f4-ccC" secondAttribute="trailing" constant="20" id="svn-fZ-z1U"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="titleLabel" destination="Cme-f4-ccC" id="jPK-1d-CKd"/>
+                <outlet property="nameLabel" destination="Cme-f4-ccC" id="4DH-FJ-EMQ"/>
+                <outlet property="skilsLabel" destination="as9-qb-hwS" id="gq5-ZS-X0u"/>
+                <outlet property="titleLabel" destination="w5l-Z2-kP4" id="3o3-CV-oeF"/>
             </connections>
             <point key="canvasLocation" x="209.16030534351145" y="-181.69014084507043"/>
         </view>

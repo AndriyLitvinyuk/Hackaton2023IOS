@@ -8,5 +8,7 @@
 import Foundation
 
 struct PeopleSearchCellModel {
+    let name: String
     let title: String
+    let skils: String
 }

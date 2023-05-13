@@ -12,7 +12,14 @@ class PeopleSearchViewModel {
     var results: [PeopleSearchCellModel] = []
 
     func search(promt: String) {
-        results = (1..<5).map { PeopleSearchCellModel(title: "Result number \($0)") }
+        results = (1..<5).map {
+            PeopleSearchCellModel(
+                name: "Name last name",
+                title: "Result number \($0)",
+                skils: "Skils"
+            )
+            
+        }
         reloadSubject.send(())
     }
 }

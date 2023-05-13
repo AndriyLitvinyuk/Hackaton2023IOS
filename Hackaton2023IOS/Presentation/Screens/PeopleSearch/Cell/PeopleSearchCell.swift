@@ -8,10 +8,15 @@
 import UIKit
 
 final class PeopleSearchCell: UICollectionViewCell {
+
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var skilsLabel: UILabel!
 
     func setupCell(model: PeopleSearchCellModel) {
         backgroundColor = .red
+        nameLabel.text = model.name
         titleLabel.text = model.title
+        skilsLabel.text = model.skils
     }
 }
