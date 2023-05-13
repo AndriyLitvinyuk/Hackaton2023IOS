@@ -6,63 +6,45 @@
 //
 
 import UIKit
+import Combine
 
 final class ProfileViewController: UIViewController, StoryboardInstantiable {
     var viewModel: ProfileViewModel? {
         didSet {
-            viewDidLoad()
+            handleUserSubjectChanged()
         }
     }
 
+    private var cancellables = Set<AnyCancellable>()
+    private var tableView: ProfileTableView?
+    private var profileViewControllerDataSource: ProfileViewControllerDataSource?
+
     override func viewDidLoad() {
-        guard let viewModel else {
-            return
-        }
-        let tableView = ProfileTableView(frame: view.frame, style: .insetGrouped)
-        tableView.dataSource = self
-        view.addSubview(tableView)
-        _ = viewModel.userSubject.sink(receiveValue: { user in
-            tableView.user = user
-            tableView.reloadData()
-        })
+        super.viewDidLoad()
+        createTableView()
+        handleUserSubjectChanged()
     }
 }
 
-extension ProfileViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        guard let tableView = tableView as? ProfileTableView else {
-            return 0
+private extension ProfileViewController {
+
+    func createTableView() {
+        profileViewControllerDataSource = ProfileViewControllerDataSource()
+        tableView = ProfileTableView(frame: view.frame, style: .insetGrouped)
+        if let tableView = tableView {
+            profileViewControllerDataSource?.profileTableView = tableView
+            tableView.dataSource = profileViewControllerDataSource
+            view.addSubview(tableView)
         }
-        return tableView.sectionInfo.count
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let tableView = tableView as? ProfileTableView else {
-            return 0
-        }
-        return tableView.sectionInfo[section].cells.count
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let tableView = tableView as? ProfileTableView else {
-            return nil
-        }
-        return tableView.sectionInfo[section].title
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let tableView = tableView as? ProfileTableView else {
-            return UITableViewCell()
-        }
-        let sectionInfo = tableView.sectionInfo
-        let cell = UITableViewCell()
-        let row = sectionInfo[indexPath.section].cells[indexPath.row]
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = row.value
-        configuration.secondaryText = row.title
-        configuration.textProperties.color = .black
-        configuration.secondaryTextProperties.color = .black
-        cell.contentConfiguration = configuration
-        return cell
+    func handleUserSubjectChanged() {
+        viewModel?.userSubject.sink(receiveValue: { [weak self] user in
+           guard let user = user else {
+               return
+           }
+            self?.tableView?.builder = SectionInfoBuilder(user: user)
+            self?.tableView?.reloadData()
+       }).store(in: &cancellables)
     }
 }
