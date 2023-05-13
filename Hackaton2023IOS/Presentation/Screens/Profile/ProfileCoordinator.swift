@@ -17,6 +17,7 @@ final class ProfileCoordinator: Coordinator {
 
     func start() {
         let viewController = ProfileViewController.instantiateViewController()
+        viewController.viewModel = ProfileViewModel()
         presenter.pushViewController(viewController, animated: false)
         self.viewController = viewController
     }

@@ -1,35 +1,14 @@
 //
-//  MyProfileViewController.swift
+//  ProfileTableDataSource.swift
 //  Hackaton2023IOS
 //
-//  Created by Kostiantyn Koloskov on 13.05.2023.
+//  Created by Andrii Lytvyniuk on 13.05.2023.
 //
 
 import UIKit
 
-final class ProfileViewController: UIViewController, StoryboardInstantiable {
-    let tableViewDataSource = ProfileTableDataSource()
-    var viewModel: ProfileViewModel? {
-        didSet {
-            viewDidLoad()
-        }
-    }
+final class ProfileTableDataSource: NSObject, UITableViewDataSource {
 
-    override func viewDidLoad() {
-        guard let viewModel else {
-            return
-        }
-        let tableView = ProfileTableView(frame: view.frame, style: .insetGrouped)
-        tableView.dataSource = self
-        view.addSubview(tableView)
-        _ = viewModel.userSubject.sink(receiveValue: { user in
-            tableView.user = user
-            tableView.reloadData()
-        })
-    }
-}
-
-extension ProfileViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let tableView = tableView as? ProfileTableView else {
             return 0
@@ -65,5 +44,12 @@ extension ProfileViewController: UITableViewDataSource {
         configuration.secondaryTextProperties.color = .black
         cell.contentConfiguration = configuration
         return cell
+    }
+    override init() {
+        super.init()
+    }
+
+    init(user: User) {
+        super.init()
     }
 }

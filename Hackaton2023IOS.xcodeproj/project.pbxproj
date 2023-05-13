@@ -13,6 +13,9 @@
 		B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDDA32A0F898700F4177D /* APIClient.swift */; };
 		B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDDA52A0F899600F4177D /* MockAPIClient.swift */; };
 		CA8464172A0F98B800103835 /* SearchAnivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8464162A0F98B800103835 /* SearchAnivationView.swift */; };
+		CA8464302A0FC11200103835 /* ProfileTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84642E2A0FC11200103835 /* ProfileTableDataSource.swift */; };
+		CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA84642F2A0FC11200103835 /* ProfileViewModel.swift */; };
+		CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8464322A0FCB0C00103835 /* ProfileTableView.swift */; };
 		CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D112A0E91220095AEEB /* AppDelegate.swift */; };
 		CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D132A0E91220095AEEB /* SceneDelegate.swift */; };
 		CA944D162A0E91220095AEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D152A0E91220095AEEB /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		B26CDDA32A0F898700F4177D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		B26CDDA52A0F899600F4177D /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		CA8464162A0F98B800103835 /* SearchAnivationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAnivationView.swift; sourceTree = "<group>"; };
+		CA84642E2A0FC11200103835 /* ProfileTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableDataSource.swift; sourceTree = "<group>"; };
+		CA84642F2A0FC11200103835 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CA8464322A0FCB0C00103835 /* ProfileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableView.swift; sourceTree = "<group>"; };
 		CA944D0E2A0E91220095AEEB /* Hackaton2023IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton2023IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA944D112A0E91220095AEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA944D132A0E91220095AEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,9 +290,12 @@
 		EB6A8B7A2A0FA65D009CC728 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				CA84642E2A0FC11200103835 /* ProfileTableDataSource.swift */,
+				CA84642F2A0FC11200103835 /* ProfileViewModel.swift */,
 				EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */,
 				EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */,
 				EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */,
+				CA8464322A0FCB0C00103835 /* ProfileTableView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -467,12 +476,14 @@
 			files = (
 				EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */,
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
+				CA8464302A0FC11200103835 /* ProfileTableDataSource.swift in Sources */,
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
 				EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */,
 				EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
+				CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */,
 				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */,
@@ -482,6 +493,7 @@
 				B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */,
 				EB6A8B832A0FA8F1009CC728 /* PeopleSearchCoordinator.swift in Sources */,
 				EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */,
+				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
 				CA8464172A0F98B800103835 /* SearchAnivationView.swift in Sources */,
 				B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */,
