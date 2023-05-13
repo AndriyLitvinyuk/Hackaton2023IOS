@@ -15,6 +15,8 @@
 		CA944D192A0E91220095AEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D172A0E91220095AEEB /* Main.storyboard */; };
 		CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1A2A0E91240095AEEB /* Assets.xcassets */; };
 		CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */; };
+		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
+		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CA944D1A2A0E91240095AEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA944D1D2A0E91240095AEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA944D1F2A0E91240095AEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA313242A0F9E4000A80328 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EBA313262A0F9E8000A80328 /* DefaultFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		B26CDD922A0F6E1D00F4177D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EBA313232A0F9E3100A80328 /* Coordinator */,
 				CA944D132A0E91220095AEEB /* SceneDelegate.swift */,
 				CA944D112A0E91220095AEEB /* AppDelegate.swift */,
 				CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */,
@@ -87,6 +92,7 @@
 			children = (
 				B26CDD962A0F6E9800F4177D /* Constants.swift */,
 				B26CDD952A0F6E7B00F4177D /* Extensions */,
+				EBA313262A0F9E8000A80328 /* DefaultFileName.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,6 +194,14 @@
 				B26CDD982A0F6EC800F4177D /* Data */,
 			);
 			path = Hackaton2023IOS;
+			sourceTree = "<group>";
+		};
+		EBA313232A0F9E3100A80328 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EBA313242A0F9E4000A80328 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +340,8 @@
 			files = (
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
+				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
+				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */,
 			);
