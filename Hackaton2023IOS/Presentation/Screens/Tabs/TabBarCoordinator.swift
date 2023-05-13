@@ -21,9 +21,9 @@ final class TabBarCoordinator: Coordinator {
 
     init(presenter: UIViewController) {
         self.presenter = presenter
-        myProfileNavigationController = UINavigationController.defaultNavigationController()
-        peopleSearchNavigationController = UINavigationController.defaultNavigationController()
-        historyNavigationController = UINavigationController.defaultNavigationController()
+        myProfileNavigationController = UINavigationController()
+        peopleSearchNavigationController = UINavigationController()
+        historyNavigationController = UINavigationController()
         viewControllersInPresenter = [
             myProfileNavigationController,
             peopleSearchNavigationController,
