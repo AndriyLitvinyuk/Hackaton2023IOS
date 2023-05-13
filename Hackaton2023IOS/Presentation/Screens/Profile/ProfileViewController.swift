@@ -8,7 +8,6 @@
 import UIKit
 
 final class ProfileViewController: UIViewController, StoryboardInstantiable {
-    let tableViewDataSource = ProfileTableDataSource()
     var viewModel: ProfileViewModel? {
         didSet {
             viewDidLoad()
