@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */; };
 		B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDD962A0F6E9800F4177D /* Constants.swift */; };
+		B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDDA12A0F88AC00F4177D /* APIRequest.swift */; };
+		B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDDA32A0F898700F4177D /* APIClient.swift */; };
+		B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26CDDA52A0F899600F4177D /* MockAPIClient.swift */; };
 		CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D112A0E91220095AEEB /* AppDelegate.swift */; };
 		CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D132A0E91220095AEEB /* SceneDelegate.swift */; };
 		CA944D162A0E91220095AEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D152A0E91220095AEEB /* ViewController.swift */; };
@@ -22,6 +25,9 @@
 		256E3DE89362462280584870 /* Pods-Hackaton2023IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton2023IOS.debug.xcconfig"; path = "Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS.debug.xcconfig"; sourceTree = "<group>"; };
 		76C2417D9F49961590E550BD /* Pods-Hackaton2023IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton2023IOS.release.xcconfig"; path = "Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS.release.xcconfig"; sourceTree = "<group>"; };
 		B26CDD962A0F6E9800F4177D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B26CDDA12A0F88AC00F4177D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		B26CDDA32A0F898700F4177D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B26CDDA52A0F899600F4177D /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		CA944D0E2A0E91220095AEEB /* Hackaton2023IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton2023IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA944D112A0E91220095AEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA944D132A0E91220095AEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 		B26CDD9A2A0F6EF100F4177D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B26CDDA02A0F888700F4177D /* APIClient */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,6 +165,16 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B26CDDA02A0F888700F4177D /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				B26CDDA12A0F88AC00F4177D /* APIRequest.swift */,
+				B26CDDA32A0F898700F4177D /* APIClient.swift */,
+				B26CDDA52A0F899600F4177D /* MockAPIClient.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 		CA944D052A0E91220095AEEB = {
@@ -327,7 +344,10 @@
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
+				B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */,
+				B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */,
 				B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */,
+				B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
