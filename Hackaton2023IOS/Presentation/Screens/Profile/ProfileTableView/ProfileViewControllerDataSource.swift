@@ -30,8 +30,13 @@ final class ProfileViewControllerDataSource: NSObject, UITableViewDataSource {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
         let row = sectionInfo[indexPath.section].cells[indexPath.row]
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = row.title
-        configuration.secondaryText = row.value
+
+        if row.title.isEmpty {
+            configuration.text = row.value
+        } else {
+            configuration.text =  "\(row.title):"
+            configuration.secondaryText = row.value
+        }
         configuration.textProperties.color = .black
         configuration.secondaryTextProperties.color = .black
         cell.contentConfiguration = configuration
