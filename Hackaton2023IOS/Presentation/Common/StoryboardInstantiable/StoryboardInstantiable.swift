@@ -14,6 +14,7 @@ protocol StoryboardInstantiable: DefaultFileName {
 extension StoryboardInstantiable where Self: UIViewController {
 
     static func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
+        // swiftlint:disable:next identifier_name
         let sb = UIStoryboard(name: defaultFileName, bundle: bundle)
         // swiftlint:disable:next force_cast
         return sb.instantiateInitialViewController() as! Self

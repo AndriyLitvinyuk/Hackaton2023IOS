@@ -22,6 +22,16 @@
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
+		EB6A8B7C2A0FA673009CC728 /* MyProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7B2A0FA672009CC728 /* MyProfileCoordinator.swift */; };
+		EB6A8B7E2A0FA6BB009CC728 /* MyProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B7D2A0FA6BB009CC728 /* MyProfileViewController.storyboard */; };
+		EB6A8B802A0FA6CD009CC728 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7F2A0FA6CD009CC728 /* MyProfileViewController.swift */; };
+		EB6A8B832A0FA8F1009CC728 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* SearchCoordinator.swift */; };
+		EB6A8B852A0FA8FD009CC728 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* SearchViewController.swift */; };
+		EB6A8B872A0FA909009CC728 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* SearchViewController.storyboard */; };
+		EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */; };
+		EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */; };
+		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
+		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
 		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
 		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +56,16 @@
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B7B2A0FA672009CC728 /* MyProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B7D2A0FA6BB009CC728 /* MyProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyProfileViewController.storyboard; sourceTree = "<group>"; };
+		EB6A8B7F2A0FA6CD009CC728 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		EB6A8B822A0FA8F1009CC728 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B842A0FA8FD009CC728 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EB6A8B862A0FA909009CC728 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
+		EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "Hackaton2023IOS/Presentation/Screens/History/UINavigationController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		EBA313242A0F9E4000A80328 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EBA313262A0F9E8000A80328 /* DefaultFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +114,9 @@
 		B26CDD932A0F6E4D00F4177D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				EB6A8B882A0FA98E009CC728 /* History */,
+				EB6A8B812A0FA8DB009CC728 /* Search */,
+				EB6A8B7A2A0FA65D009CC728 /* MyProfile */,
 				EB6A8B772A0FA08D009CC728 /* Tabs */,
 				CA944D172A0E91220095AEEB /* Main.storyboard */,
 				CA944D152A0E91220095AEEB /* ViewController.swift */,
@@ -115,6 +138,7 @@
 		B26CDD952A0F6E7B00F4177D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,6 +281,36 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
+		EB6A8B7A2A0FA65D009CC728 /* MyProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A8B7B2A0FA672009CC728 /* MyProfileCoordinator.swift */,
+				EB6A8B7D2A0FA6BB009CC728 /* MyProfileViewController.storyboard */,
+				EB6A8B7F2A0FA6CD009CC728 /* MyProfileViewController.swift */,
+			);
+			path = MyProfile;
+			sourceTree = "<group>";
+		};
+		EB6A8B812A0FA8DB009CC728 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A8B822A0FA8F1009CC728 /* SearchCoordinator.swift */,
+				EB6A8B842A0FA8FD009CC728 /* SearchViewController.swift */,
+				EB6A8B862A0FA909009CC728 /* SearchViewController.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EB6A8B882A0FA98E009CC728 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */,
+				EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */,
+				EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		EBA313232A0F9E3100A80328 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +383,9 @@
 				CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */,
 				CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */,
 				CA944D192A0E91220095AEEB /* Main.storyboard in Resources */,
+				EB6A8B872A0FA909009CC728 /* SearchViewController.storyboard in Resources */,
+				EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */,
+				EB6A8B7E2A0FA6BB009CC728 /* MyProfileViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,17 +457,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6A8B802A0FA6CD009CC728 /* MyProfileViewController.swift in Sources */,
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
+				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
+				EB6A8B852A0FA8FD009CC728 /* SearchViewController.swift in Sources */,
+				EB6A8B7C2A0FA673009CC728 /* MyProfileCoordinator.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
 				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */,
 				B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */,
+				EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */,
 				B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */,
 				B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */,
+				EB6A8B832A0FA8F1009CC728 /* SearchCoordinator.swift in Sources */,
 				EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */,
+				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
 				CA8464172A0F98B800103835 /* SearchAnivationView.swift in Sources */,
 				B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */,
 			);
