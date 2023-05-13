@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */; };
 		CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D112A0E91220095AEEB /* AppDelegate.swift */; };
 		CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D132A0E91220095AEEB /* SceneDelegate.swift */; };
 		CA944D162A0E91220095AEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D152A0E91220095AEEB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton2023IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		256E3DE89362462280584870 /* Pods-Hackaton2023IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton2023IOS.debug.xcconfig"; path = "Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		76C2417D9F49961590E550BD /* Pods-Hackaton2023IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackaton2023IOS.release.xcconfig"; path = "Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS.release.xcconfig"; sourceTree = "<group>"; };
 		CA944D0E2A0E91220095AEEB /* Hackaton2023IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton2023IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA944D112A0E91220095AEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA944D132A0E91220095AEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C455F6DDD62EB753E0EF20C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				256E3DE89362462280584870 /* Pods-Hackaton2023IOS.debug.xcconfig */,
+				76C2417D9F49961590E550BD /* Pods-Hackaton2023IOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2604DA8A1D2F9E04724E5679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA944D052A0E91220095AEEB = {
 			isa = PBXGroup;
 			children = (
 				CA944D102A0E91220095AEEB /* Hackaton2023IOS */,
 				CA944D0F2A0E91220095AEEB /* Products */,
+				0C455F6DDD62EB753E0EF20C /* Pods */,
+				2604DA8A1D2F9E04724E5679 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA944D222A0E91240095AEEB /* Build configuration list for PBXNativeTarget "Hackaton2023IOS" */;
 			buildPhases = (
+				4D324D5FEB566558714A7B41 /* [CP] Check Pods Manifest.lock */,
 				CA944D0A2A0E91220095AEEB /* Sources */,
 				CA944D0B2A0E91220095AEEB /* Frameworks */,
 				CA944D0C2A0E91220095AEEB /* Resources */,
+				ACA553DC5DB240E3B3284370 /* [CP] Embed Pods Frameworks */,
+				CA2410982A0F75D90068CFCA /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D324D5FEB566558714A7B41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hackaton2023IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA553DC5DB240E3B3284370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackaton2023IOS/Pods-Hackaton2023IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2410982A0F75D90068CFCA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA944D0A2A0E91220095AEEB /* Sources */ = {
@@ -282,6 +369,7 @@
 		};
 		CA944D232A0E91240095AEEB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 256E3DE89362462280584870 /* Pods-Hackaton2023IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +398,7 @@
 		};
 		CA944D242A0E91240095AEEB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C2417D9F49961590E550BD /* Pods-Hackaton2023IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
