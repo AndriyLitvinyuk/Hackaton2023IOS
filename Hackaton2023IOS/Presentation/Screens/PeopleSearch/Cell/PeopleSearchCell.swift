@@ -14,7 +14,8 @@ final class PeopleSearchCell: UICollectionViewCell {
     @IBOutlet weak var skilsLabel: UILabel!
 
     func setupCell(model: PeopleSearchCellModel) {
-        backgroundColor = .red
+        backgroundColor = .lightGray
+        self.layer.cornerRadius = 10
         nameLabel.text = model.name
         titleLabel.text = model.title
         skilsLabel.text = model.skils

@@ -10,14 +10,19 @@ import Combine
 
 final class PeopleSearchViewController: UIViewController, StoryboardInstantiable {
 
+    private enum Constants {
+        static let cellHeight: CGFloat = 100
+        static let cellReuseIdentifier = "PeopleSearchCell"
+    }
+
     private let viewModel = PeopleSearchViewModel()
     private var cancellables = Set<AnyCancellable>()
     private let searchController = UISearchController()
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-            let cellNib = UINib(nibName: "PeopleSearchCell", bundle: nil)
-            collectionView.register(cellNib, forCellWithReuseIdentifier: "PeopleSearchCell")
+            let cellNib = UINib(nibName: Constants.cellReuseIdentifier, bundle: nil)
+            collectionView.register(cellNib, forCellWithReuseIdentifier: Constants.cellReuseIdentifier)
         }
     }
 
@@ -43,17 +48,13 @@ extension PeopleSearchViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "PeopleSearchCell",
+            withReuseIdentifier: Constants.cellReuseIdentifier,
             for: indexPath
         ) as? PeopleSearchCell else {
             fatalError()
         }
         cell.setupCell(model: viewModel.results[indexPath.item])
         return cell
-    }
-
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,7 +68,7 @@ extension PeopleSearchViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        CGSize(width: collectionView.bounds.width, height: 100)
+        CGSize(width: collectionView.bounds.width, height: Constants.cellHeight)
     }
 }
 
@@ -78,5 +79,9 @@ extension PeopleSearchViewController: UISearchBarDelegate {
         }
         searchBar.endEditing(true)
         viewModel.search(promt: text)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.cancel()
     }
 }
