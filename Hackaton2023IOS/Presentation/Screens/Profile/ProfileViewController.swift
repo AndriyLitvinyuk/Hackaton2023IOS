@@ -7,5 +7,5 @@
 
 import UIKit
 
-class MyProfileViewController: UIViewController, StoryboardInstantiable {
+final class ProfileViewController: UIViewController, StoryboardInstantiable {
 }

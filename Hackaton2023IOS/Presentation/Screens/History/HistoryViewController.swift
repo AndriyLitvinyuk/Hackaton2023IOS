@@ -7,5 +7,5 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController, StoryboardInstantiable {
+final class HistoryViewController: UIViewController, StoryboardInstantiable {
 }

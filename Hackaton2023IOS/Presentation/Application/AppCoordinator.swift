@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoorinator: Coordinator {
+final class AppCoorinator: Coordinator {
     private let window: UIWindow
     private let rootViewController: UIViewController
     private var tabBarCoordinator: TabBarCoordinator?

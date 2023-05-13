@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoryCoordinator: Coordinator {
+final class HistoryCoordinator: Coordinator {
     private let presenter: UINavigationController
     private weak var viewController: HistoryViewController?
 

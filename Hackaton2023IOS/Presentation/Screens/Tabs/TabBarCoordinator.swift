@@ -13,20 +13,20 @@ final class TabBarCoordinator: Coordinator {
     private let tabViewController: UITabBarController
 
     private let myProfileNavigationController: UINavigationController
-    private var myProfileCoordinator: MyProfileCoordinator?
-    private let searchNavigationController: UINavigationController
-    private var searchCoordinator: SearchCoordinator?
+    private var myProfileCoordinator: ProfileCoordinator?
+    private let peopleSearchNavigationController: UINavigationController
+    private var peopleSearchCoordinator: PeopleSearchCoordinator?
     private let historyNavigationController: UINavigationController
     private var historyCoordinator: HistoryCoordinator?
 
     init(presenter: UIViewController) {
         self.presenter = presenter
         myProfileNavigationController = UINavigationController.defaultNavigationController()
-        searchNavigationController = UINavigationController.defaultNavigationController()
+        peopleSearchNavigationController = UINavigationController.defaultNavigationController()
         historyNavigationController = UINavigationController.defaultNavigationController()
         viewControllersInPresenter = [
             myProfileNavigationController,
-            searchNavigationController,
+            peopleSearchNavigationController,
             historyNavigationController
         ]
         tabViewController = UITabBarController()
@@ -40,12 +40,12 @@ final class TabBarCoordinator: Coordinator {
         tabViewController.viewControllers = viewControllersInPresenter
 
         myProfileNavigationController.tabBarItem = UITabBarItem(title: "My profile", image: nil, selectedImage: nil)
-        myProfileCoordinator = MyProfileCoordinator(presenter: myProfileNavigationController)
+        myProfileCoordinator = ProfileCoordinator(presenter: myProfileNavigationController)
         myProfileCoordinator?.start()
 
-        searchNavigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
-        searchCoordinator = SearchCoordinator(presenter: searchNavigationController)
-        searchCoordinator?.start()
+        peopleSearchNavigationController.tabBarItem = UITabBarItem(title: "People search", image: nil, selectedImage: nil)
+        peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
+        peopleSearchCoordinator?.start()
 
         historyNavigationController.tabBarItem = UITabBarItem(title: "History", image: nil, selectedImage: nil)
         historyCoordinator = HistoryCoordinator(presenter: historyNavigationController)
