@@ -103,8 +103,7 @@ final class ProfileTableView: UITableView {
 
     private static func mapExperience(experience: User.WorkExperience.Experience) -> SectionInfo.Cell {
         .init(
-            title: experience.company,
-            value: "Customer: \(experience.customer)\n" +
+            title: "Customer: \(experience.customer)\n" +
             "Start Date: \(experience.startDate)\n" +
             "End Date: \(experience.endDate)\n" +
             "Project: \(experience.project)\n" +
@@ -113,7 +112,8 @@ final class ProfileTableView: UITableView {
             "Team Size: \(experience.teamSize)\n" +
             "Database: \(experience.database)\n" +
             "Tools: \(experience.tools)\n" +
-            "Technologies: \(experience.technologies)\n"
+            "Technologies: \(experience.technologies)\n",
+            value: experience.company
         )
     }
 

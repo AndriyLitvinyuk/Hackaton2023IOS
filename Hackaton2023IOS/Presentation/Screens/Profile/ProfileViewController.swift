@@ -58,8 +58,8 @@ extension ProfileViewController: UITableViewDataSource {
         let cell = UITableViewCell()
         let row = sectionInfo[indexPath.section].cells[indexPath.row]
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = row.title
-        configuration.secondaryText = row.value
+        configuration.text = row.value
+        configuration.secondaryText = row.title
         configuration.textProperties.color = .black
         configuration.secondaryTextProperties.color = .black
         cell.contentConfiguration = configuration
