@@ -10,6 +10,7 @@ import UIKit
 final class PeopleSearchCoordinator: Coordinator {
     private let presenter: UINavigationController
     private weak var viewController: PeopleSearchViewController?
+    private var profileCoordinator: ProfileCoordinator?
 
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -18,6 +19,14 @@ final class PeopleSearchCoordinator: Coordinator {
     func start() {
         let viewController = PeopleSearchViewController.instantiateViewController()
         presenter.pushViewController(viewController, animated: false)
+        viewController.delegate = self
         self.viewController = viewController
+    }
+}
+
+extension PeopleSearchCoordinator: PeopleSearchViewControllerDelegate {
+    func selectedProfile(profile: User) {
+        profileCoordinator = ProfileCoordinator(presenter: presenter)
+        profileCoordinator?.start()
     }
 }

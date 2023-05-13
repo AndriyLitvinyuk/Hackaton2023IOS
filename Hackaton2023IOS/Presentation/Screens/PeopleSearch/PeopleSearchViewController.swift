@@ -8,6 +8,10 @@
 import UIKit
 import Combine
 
+protocol PeopleSearchViewControllerDelegate: AnyObject {
+    func selectedProfile(profile: User)
+}
+
 final class PeopleSearchViewController: UIViewController, StoryboardInstantiable {
 
     private enum Constants {
@@ -15,6 +19,7 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
         static let cellReuseIdentifier = "PeopleSearchCell"
     }
 
+    weak var delegate: PeopleSearchViewControllerDelegate?
     private let viewModel = PeopleSearchViewModel()
     private var cancellables = Set<AnyCancellable>()
     private let searchController = UISearchController()
@@ -53,12 +58,12 @@ extension PeopleSearchViewController: UICollectionViewDataSource {
         ) as? PeopleSearchCell else {
             fatalError()
         }
-        cell.setupCell(model: viewModel.results[indexPath.item])
+        cell.setupCell(model: viewModel.cellModelFor(indexPath.item))
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.results.count
+        viewModel.profiles.count
     }
 }
 
@@ -83,5 +88,11 @@ extension PeopleSearchViewController: UISearchBarDelegate {
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         viewModel.cancel()
+    }
+}
+
+extension PeopleSearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.selectedProfile(profile: viewModel.profiles[indexPath.item])
     }
 }
