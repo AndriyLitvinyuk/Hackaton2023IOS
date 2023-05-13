@@ -43,7 +43,11 @@ final class TabBarCoordinator: Coordinator {
         myProfileCoordinator = ProfileCoordinator(presenter: myProfileNavigationController)
         myProfileCoordinator?.start()
 
-        peopleSearchNavigationController.tabBarItem = UITabBarItem(title: "People search", image: nil, selectedImage: nil)
+        peopleSearchNavigationController.tabBarItem = UITabBarItem(
+            title: "People search",
+            image: nil,
+            selectedImage: nil
+        )
         peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
 
