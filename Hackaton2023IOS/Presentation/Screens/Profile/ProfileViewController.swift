@@ -34,9 +34,17 @@ private extension ProfileViewController {
         if let tableView = tableView {
             profileViewControllerTableModel?.profileTableView = tableView
             tableView.dataSource = profileViewControllerTableModel
-            tableView.delegate = profileViewControllerTableModel
             view.addSubview(tableView)
         }
+    }
+
+    func createHeaderView(user: User) -> UIView {
+        let nameLabel = UILabel()
+        nameLabel.text = "First Name: \(user.firstName)\nLast Name: \(user.lastName)"
+        let titleLabel = UILabel()
+        titleLabel.text = "Current Title: \(user.title)\nDesired Title: \(user.desiredTitle)"
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, titleLabel])
+        return stackView
     }
 
     func handleUserSubjectChanged() {
@@ -44,6 +52,7 @@ private extension ProfileViewController {
            guard let user = user else {
                return
            }
+            self?.tableView?.tableHeaderView = self?.createHeaderView(user: user)
             self?.tableView?.builder = SectionInfoBuilder(user: user)
             self?.tableView?.reloadData()
        }).store(in: &cancellables)

@@ -28,49 +28,23 @@ extension ProfileViewControllerTableModel: UITableViewDataSource {
         guard let sectionInfo = profileTableView?.sectionInfo else {
             return UITableViewCell()
         }
-        let cell = UITableViewCell(
-            style: sectionInfo[indexPath.section].style.cellStyleVariant,
-            reuseIdentifier: "UITableViewCell"
-        )
         let row = sectionInfo[indexPath.section].cells[indexPath.row]
-        var configuration = cell.defaultContentConfiguration()
-
-        if row.title.isEmpty {
-            configuration.text = row.value
-        } else {
-            configuration.text =  (row.value)
-            configuration.secondaryText = row.title
-        }
-        configuration.textProperties.color = .black
-        configuration.secondaryTextProperties.color = .gray
-        cell.contentConfiguration = configuration
-        cell.isUserInteractionEnabled = row.isInteractionEnabled
-        return cell
-    }
-}
-
-extension ProfileViewControllerTableModel: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard  let cell = profileTableView?.sectionInfo[indexPath.section].cells[indexPath.row],
-               let url = URL(string: cell.value),
-               UIApplication.shared.canOpenURL(url) else {
-            return
-        }
-        UIApplication.shared.open(url)
-
-    }
-}
-
-private extension Style {
-    var cellStyleVariant: UITableViewCell.CellStyle {
-        switch self {
-        case .standard:
-            return .default
-        case .oneLine:
-            return .value1
-        case .subtitle:
-            return .subtitle
+        switch row {
+        case .subCategoryCell(let subCategory):
+            let cell = ProfileSubcategoryTableViewCell()
+            cell.applyCell(subCategory: subCategory)
+            cell.isUserInteractionEnabled = false
+            return cell
+        case .textCell(let title, let value):
+            let cell = UITableViewCell()
+            var configuration = cell.defaultContentConfiguration()
+            configuration.text = value
+            configuration.textProperties.color = .black
+            configuration.secondaryText = title
+            configuration.secondaryTextProperties.color = .gray
+            cell.contentConfiguration = configuration
+            cell.isUserInteractionEnabled = false
+            return cell
         }
     }
 }

@@ -8,25 +8,16 @@
 import Foundation
 
 struct SectionInfo {
-    struct Cell {
-        let title: String
-        let value: String
-        let isInteractionEnabled: Bool
-
-        init(title: String, value: String, isInteractionEnabled: Bool = false) {
-            self.title = title
-            self.value = value
-            self.isInteractionEnabled = isInteractionEnabled
-        }
+    enum Cell {
+        case subCategoryCell(Category.SubCategory)
+        case textCell(String, String)
     }
     let title: String
     let cells: [Cell]
-    let style: Style
 
-    init(title: String, cells: [Cell], style: Style = .standard) {
+    init(title: String, cells: [Cell]) {
         self.title = title
         self.cells = cells
-        self.style = style
     }
 }
 
