@@ -1,5 +1,5 @@
 //
-//  HistoryCoordinator.swift
+//  TableCoordinator.swift
 //  Hackaton2023IOS
 //
 //  Created by Kostiantyn Koloskov on 13.05.2023.
@@ -7,16 +7,17 @@
 
 import UIKit
 
-final class HistoryCoordinator: Coordinator {
+final class TableCoordinator: Coordinator {
     private let presenter: UINavigationController
-    private weak var viewController: HistoryViewController?
+    private weak var viewController: TableViewController?
 
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
 
     func start() {
-        let viewController = HistoryViewController.instantiateViewController()
+        let viewController = TableViewController.instantiateViewController()
+        viewController.viewModel = TableViewModel()
         presenter.pushViewController(viewController, animated: false)
         self.viewController = viewController
     }

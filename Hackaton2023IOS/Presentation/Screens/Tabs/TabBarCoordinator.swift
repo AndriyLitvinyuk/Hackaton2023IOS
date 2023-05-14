@@ -16,14 +16,18 @@ final class TabBarCoordinator: Coordinator {
     private var myProfileCoordinator: ProfileCoordinator?
     private let peopleSearchNavigationController: UINavigationController
     private var peopleSearchCoordinator: RoadmapCoordinator?
+    private let historyNavigationController: UINavigationController
+    private var tableCoordinator: TableCoordinator?
 
     init(presenter: UIViewController) {
         self.presenter = presenter
         myProfileNavigationController = UINavigationController.defaultNavigationController()
         peopleSearchNavigationController = UINavigationController.defaultNavigationController()
+        historyNavigationController = UINavigationController.defaultNavigationController()
         viewControllersInPresenter = [
             myProfileNavigationController,
-            peopleSearchNavigationController
+            peopleSearchNavigationController,
+            historyNavigationController
         ]
         tabViewController = Self.createTabBar()
     }
@@ -60,6 +64,13 @@ final class TabBarCoordinator: Coordinator {
         )
         peopleSearchCoordinator = RoadmapCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
+        historyNavigationController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "tablecells.fill"),
+            selectedImage: nil
+        )
+        tableCoordinator = TableCoordinator(presenter: historyNavigationController)
+        tableCoordinator?.start()
         tabViewController.selectedIndex = 1
     }
 }

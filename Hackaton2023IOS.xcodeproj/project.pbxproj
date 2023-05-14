@@ -31,6 +31,11 @@
 		CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; };
 		CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA9F3E1C2A11606600C93E90 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */; };
+		CA9F3E272A11785700C93E90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E212A11785700C93E90 /* TableViewController.swift */; };
+		CA9F3E282A11785700C93E90 /* TableCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E222A11785700C93E90 /* TableCoordinator.swift */; };
+		CA9F3E292A11785700C93E90 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E232A11785700C93E90 /* TableViewModel.swift */; };
+		CA9F3E2A2A11785700C93E90 /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9F3E242A11785700C93E90 /* TableViewController.storyboard */; };
+		CA9F3E2E2A117DD500C93E90 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E2D2A117DD500C93E90 /* ScheduleTableViewCell.swift */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -40,9 +45,6 @@
 		EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */; };
 		EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */; };
 		EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */; };
-		EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */; };
-		EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */; };
-		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
 		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
 		EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */; };
 		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
@@ -94,6 +96,11 @@
 		CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effective_Programming_for_America_logo.svg.png; sourceTree = "<group>"; };
 		CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = Hackaton2023IOS/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
 		CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Hackaton2023IOS/Ganttis/Ganttis.xcframework/UIColor+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		CA9F3E212A11785700C93E90 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CA9F3E222A11785700C93E90 /* TableCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCoordinator.swift; sourceTree = "<group>"; };
+		CA9F3E232A11785700C93E90 /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		CA9F3E242A11785700C93E90 /* TableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TableViewController.storyboard; sourceTree = "<group>"; };
+		CA9F3E2D2A117DD500C93E90 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -103,9 +110,6 @@
 		EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
 		EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoadmapViewController.storyboard; sourceTree = "<group>"; };
-		EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
-		EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
-		EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "Hackaton2023IOS/Presentation/Screens/History/UINavigationController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gantt+Extensions.swift"; sourceTree = "<group>"; };
 		EB85B9D32A11074000566234 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
@@ -164,8 +168,8 @@
 		B26CDD932A0F6E4D00F4177D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CA9F3E1F2A11785700C93E90 /* Table */,
 				EB6A8B772A0FA08D009CC728 /* Tabs */,
-				EB6A8B882A0FA98E009CC728 /* History */,
 				EB6A8B812A0FA8DB009CC728 /* Roadmap */,
 				EB6A8B7A2A0FA65D009CC728 /* Profile */,
 			);
@@ -315,6 +319,26 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		CA9F3E1F2A11785700C93E90 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3E2C2A117DCC00C93E90 /* ScheduleTable */,
+				CA9F3E212A11785700C93E90 /* TableViewController.swift */,
+				CA9F3E222A11785700C93E90 /* TableCoordinator.swift */,
+				CA9F3E232A11785700C93E90 /* TableViewModel.swift */,
+				CA9F3E242A11785700C93E90 /* TableViewController.storyboard */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		CA9F3E2C2A117DCC00C93E90 /* ScheduleTable */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3E2D2A117DD500C93E90 /* ScheduleTableViewCell.swift */,
+			);
+			path = ScheduleTable;
+			sourceTree = "<group>";
+		};
 		EB6A8B712A0FA010009CC728 /* StoryboardInstantiable */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,16 +386,6 @@
 				EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */,
 			);
 			path = Roadmap;
-			sourceTree = "<group>";
-		};
-		EB6A8B882A0FA98E009CC728 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */,
-				EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */,
-				EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */,
-			);
-			path = History;
 			sourceTree = "<group>";
 		};
 		EB6A8B912A0FB109009CC728 /* FileName */ = {
@@ -464,7 +478,7 @@
 				CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */,
 				CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */,
 				EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */,
-				EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */,
+				CA9F3E2A2A11785700C93E90 /* TableViewController.storyboard in Resources */,
 				EB6A8B7E2A0FA6BB009CC728 /* ProfileViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +561,7 @@
 				EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */,
 				EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */,
 				EB85B9D42A11074000566234 /* JsonReader.swift in Sources */,
+				CA9F3E2E2A117DD500C93E90 /* ScheduleTableViewCell.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
 				B26CDDAB2A0FD79000F4177D /* SectionInfoBuilder.swift in Sources */,
@@ -556,15 +571,16 @@
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */,
 				B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */,
-				EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */,
 				B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */,
 				EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */,
 				EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */,
+				CA9F3E292A11785700C93E90 /* TableViewModel.swift in Sources */,
 				EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */,
 				EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */,
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
-				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
+				CA9F3E282A11785700C93E90 /* TableCoordinator.swift in Sources */,
 				EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */,
+				CA9F3E272A11785700C93E90 /* TableViewController.swift in Sources */,
 				B26CDDAE2A0FD8F600F4177D /* SectionInfo.swift in Sources */,
 				CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */,
 				CA9F3E062A10F71600C93E90 /* Category.swift in Sources */,

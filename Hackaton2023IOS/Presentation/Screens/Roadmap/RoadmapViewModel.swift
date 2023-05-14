@@ -19,7 +19,7 @@ final class RoadmapViewModel {
 
     private let apiClient = URLSessionAPIClient()
 
-    func sendRequest(date: Date) {
+    func sendRequest(date: Date, attempt: Int = 0) {
         guard let user = UserInfoSingleton.shared.user else {
             return
         }
@@ -35,8 +35,13 @@ final class RoadmapViewModel {
             do {
                 let response = try await apiClient.sendRequest(request)
                 setRoadmap(response)
+                UserInfoSingleton.shared.schedule.send(response)
             } catch {
-                dataSubject.send(.error(error))
+                if attempt < 3 {
+                    sendRequest(date: date, attempt: attempt + 1)
+                } else {
+                    dataSubject.send(.error(error))
+                }
             }
         }
     }

@@ -27,6 +27,7 @@ final class UserInfoSingleton {
     static let shared = UserInfoSingleton(user: nil)
 
     var user: User?
+    let schedule = CurrentValueSubject<[ScheduleResponse]?, Never>(nil)
 
     private init(user: User?) {
         self.user = user
