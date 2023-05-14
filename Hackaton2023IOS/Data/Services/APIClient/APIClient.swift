@@ -35,7 +35,7 @@ final class URLSessionAPIClient: APIClient {
 
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            print(String(data: data, encoding: .utf8))
+            print(String(data: data, encoding: .utf8) ?? "")
             return try decoder.decode(T.Response.self, from: data)
         } catch {
             throw error
