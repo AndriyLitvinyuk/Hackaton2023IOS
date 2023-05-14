@@ -17,13 +17,19 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(ganttChartView)
+        addChart()
         bindViewModel()
     }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        ganttChartView.frame = view.bounds
+    private func addChart() {
+        view.addSubview(ganttChartView)
+        ganttChartView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            ganttChartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ganttChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            ganttChartView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ganttChartView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+        ])
     }
 
     private func bindViewModel() {
