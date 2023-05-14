@@ -14,6 +14,7 @@ final class ProfileTableView: UITableView {
 
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
+        self.register(ProfileSubCategoryTableViewCell.self, forCellReuseIdentifier: "ProfileSubCategoryTableViewCell")
     }
 
     required init?(coder: NSCoder) {

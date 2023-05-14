@@ -25,6 +25,8 @@
 		CA944D192A0E91220095AEEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D172A0E91220095AEEB /* Main.storyboard */; };
 		CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1A2A0E91240095AEEB /* Assets.xcassets */; };
 		CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */; };
+		CA9F3E062A10F71600C93E90 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E052A10F71600C93E90 /* Category.swift */; };
+		CA9F3E082A10FB0D00C93E90 /* ProfileSubCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E072A10FB0D00C93E90 /* ProfileSubCategoryTableViewCell.swift */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -65,6 +67,8 @@
 		CA944D1A2A0E91240095AEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA944D1D2A0E91240095AEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA944D1F2A0E91240095AEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9F3E052A10F71600C93E90 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CA9F3E072A10FB0D00C93E90 /* ProfileSubCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				B26CDDB12A0FE1F200F4177D /* User.swift */,
+				CA9F3E052A10F71600C93E90 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				B26CDDAA2A0FD79000F4177D /* SectionInfoBuilder.swift */,
 				CA8464322A0FCB0C00103835 /* ProfileTableView.swift */,
 				B26CDDAF2A0FD9C700F4177D /* ProfileViewControllerTableModel.swift */,
+				CA9F3E072A10FB0D00C93E90 /* ProfileSubCategoryTableViewCell.swift */,
 			);
 			path = ProfileTableView;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B26CDDB22A0FE1F200F4177D /* User.swift in Sources */,
+				CA9F3E082A10FB0D00C93E90 /* ProfileSubCategoryTableViewCell.swift in Sources */,
 				EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */,
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
@@ -514,6 +521,7 @@
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
 				B26CDDAE2A0FD8F600F4177D /* SectionInfo.swift in Sources */,
+				CA9F3E062A10F71600C93E90 /* Category.swift in Sources */,
 				B26CDDB02A0FD9C700F4177D /* ProfileViewControllerTableModel.swift in Sources */,
 				CA8464172A0F98B800103835 /* SearchAnivationView.swift in Sources */,
 				B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */,
