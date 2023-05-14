@@ -8,6 +8,6 @@
 import Foundation
 
 struct ScheduleRequestBody: Encodable {
-    let desiredDate: Date
+    let desiredDate: String
     let categories: [Category]
 }

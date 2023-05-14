@@ -33,7 +33,7 @@ protocol APIRequest {
 
 extension APIRequest {
     var baseURL: URL? {
-        return URL(string: "https://9yqzn96xqb.execute-api.eu-west-1.amazonaws.com")
+        return URL(string: "https://tpigrlpoja5jcncv63thmatehq0hiqoe.lambda-url.eu-west-1.on.aws")
     }
 
     func makeURLRequest() throws -> URLRequest {

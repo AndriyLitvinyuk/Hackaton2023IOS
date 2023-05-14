@@ -28,22 +28,43 @@
 		CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */; };
 		CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */; };
 		CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */; };
+		CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; };
+		CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA9F3E1C2A11606600C93E90 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
 		EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */; };
 		EB6A8B7E2A0FA6BB009CC728 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */; };
 		EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */; };
-		EB6A8B832A0FA8F1009CC728 /* PeopleSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */; };
-		EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */; };
-		EB6A8B872A0FA909009CC728 /* PeopleSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */; };
+		EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */; };
+		EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */; };
+		EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */; };
 		EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */; };
 		EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */; };
 		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
 		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
+		EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */; };
+		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
+		EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E72A112D2400566234 /* Date+Extensions.swift */; };
+		EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */; };
 		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
 		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA9F3E1A2A115BD700C93E90 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackaton2023IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,19 +92,26 @@
 		CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestBody.swift; sourceTree = "<group>"; };
 		CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effective_Programming_for_America_logo.svg.png; sourceTree = "<group>"; };
+		CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = Hackaton2023IOS/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
+		CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Hackaton2023IOS/Ganttis/Ganttis.xcframework/UIColor+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchCoordinator.swift; sourceTree = "<group>"; };
-		EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchViewController.swift; sourceTree = "<group>"; };
-		EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleSearchViewController.storyboard; sourceTree = "<group>"; };
+		EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
+		EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoadmapViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "Hackaton2023IOS/Presentation/Screens/History/UINavigationController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gantt+Extensions.swift"; sourceTree = "<group>"; };
+		EB85B9D32A11074000566234 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		EB85B9DF2A11207700566234 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = ../TryGantt/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
+		EB85B9E72A112D2400566234 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapViewModel.swift; sourceTree = "<group>"; };
 		EBA313242A0F9E4000A80328 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EBA313262A0F9E8000A80328 /* DefaultFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */,
 				057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +141,8 @@
 		2604DA8A1D2F9E04724E5679 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB85B9DF2A11207700566234 /* Ganttis.xcframework */,
+				CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */,
 				119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */,
 			);
 			name = Frameworks;
@@ -135,7 +166,7 @@
 			children = (
 				EB6A8B772A0FA08D009CC728 /* Tabs */,
 				EB6A8B882A0FA98E009CC728 /* History */,
-				EB6A8B812A0FA8DB009CC728 /* PeopleSearch */,
+				EB6A8B812A0FA8DB009CC728 /* Roadmap */,
 				EB6A8B7A2A0FA65D009CC728 /* Profile */,
 			);
 			path = Screens;
@@ -148,6 +179,8 @@
 				EB6A8B712A0FA010009CC728 /* StoryboardInstantiable */,
 				CA8464152A0F98B800103835 /* Views */,
 				B26CDD952A0F6E7B00F4177D /* Extensions */,
+				EB85B9E72A112D2400566234 /* Date+Extensions.swift */,
+				EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -156,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */,
+				CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +197,7 @@
 		B26CDD982A0F6EC800F4177D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EB85B9D02A11058800566234 /* Mock */,
 				B26CDD992A0F6EE500F4177D /* Models */,
 				B26CDD9A2A0F6EF100F4177D /* Services */,
 				B26CDD9B2A0F6EFC00F4177D /* Repositories */,
@@ -318,14 +353,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		EB6A8B812A0FA8DB009CC728 /* PeopleSearch */ = {
+		EB6A8B812A0FA8DB009CC728 /* Roadmap */ = {
 			isa = PBXGroup;
 			children = (
-				EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */,
-				EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */,
-				EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */,
+				EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */,
+				EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */,
+				EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */,
+				EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */,
 			);
-			path = PeopleSearch;
+			path = Roadmap;
 			sourceTree = "<group>";
 		};
 		EB6A8B882A0FA98E009CC728 /* History */ = {
@@ -342,8 +378,16 @@
 			isa = PBXGroup;
 			children = (
 				EBA313262A0F9E8000A80328 /* DefaultFileName.swift */,
+				EB85B9D32A11074000566234 /* JsonReader.swift */,
 			);
 			path = FileName;
+			sourceTree = "<group>";
+		};
+		EB85B9D02A11058800566234 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		EBA313232A0F9E3100A80328 /* Coordinator */ = {
@@ -367,6 +411,7 @@
 				CA944D0C2A0E91220095AEEB /* Resources */,
 				ACA553DC5DB240E3B3284370 /* [CP] Embed Pods Frameworks */,
 				CA2410982A0F75D90068CFCA /* SwiftLint */,
+				CA9F3E1A2A115BD700C93E90 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,7 +463,7 @@
 				CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */,
 				CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */,
 				CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */,
-				EB6A8B872A0FA909009CC728 /* PeopleSearchViewController.storyboard in Resources */,
+				EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */,
 				EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */,
 				EB6A8B7E2A0FA6BB009CC728 /* ProfileViewController.storyboard in Resources */,
 			);
@@ -498,22 +543,28 @@
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
 				CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */,
 				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
-				EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */,
+				EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */,
+				EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */,
 				EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */,
+				EB85B9D42A11074000566234 /* JsonReader.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
 				B26CDDAB2A0FD79000F4177D /* SectionInfoBuilder.swift in Sources */,
 				CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */,
 				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
+				CA9F3E1C2A11606600C93E90 /* UIColor+Extensions.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */,
 				B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */,
 				EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */,
 				B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */,
-				EB6A8B832A0FA8F1009CC728 /* PeopleSearchCoordinator.swift in Sources */,
+				EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */,
+				EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */,
 				EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */,
+				EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */,
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
+				EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */,
 				B26CDDAE2A0FD8F600F4177D /* SectionInfo.swift in Sources */,
 				CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */,
 				CA9F3E062A10F71600C93E90 /* Category.swift in Sources */,

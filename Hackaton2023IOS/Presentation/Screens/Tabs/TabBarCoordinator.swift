@@ -15,19 +15,15 @@ final class TabBarCoordinator: Coordinator {
     private let myProfileNavigationController: UINavigationController
     private var myProfileCoordinator: ProfileCoordinator?
     private let peopleSearchNavigationController: UINavigationController
-    private var peopleSearchCoordinator: PeopleSearchCoordinator?
-    private let historyNavigationController: UINavigationController
-    private var historyCoordinator: HistoryCoordinator?
+    private var peopleSearchCoordinator: RoadmapCoordinator?
 
     init(presenter: UIViewController) {
         self.presenter = presenter
         myProfileNavigationController = UINavigationController.defaultNavigationController()
         peopleSearchNavigationController = UINavigationController.defaultNavigationController()
-        historyNavigationController = UINavigationController.defaultNavigationController()
         viewControllersInPresenter = [
             myProfileNavigationController,
-            peopleSearchNavigationController,
-            historyNavigationController
+            peopleSearchNavigationController
         ]
         tabViewController = Self.createTabBar()
     }
@@ -40,7 +36,7 @@ final class TabBarCoordinator: Coordinator {
         tabViewController.tabBar.layer.shadowRadius = 6
         tabViewController.tabBar.layer.shadowColor = UIColor.black.cgColor
         tabViewController.tabBar.layer.shadowOpacity = 0.3
-        tabViewController.tabBar.tintColor = UIColor(red: 133/255, green: 126/255, blue: 208/255, alpha: 1)
+        tabViewController.tabBar.tintColor = .primaryColor
         tabViewController.modalPresentationStyle = .fullScreen
         return tabViewController
     }
@@ -62,16 +58,8 @@ final class TabBarCoordinator: Coordinator {
             image: UIImage(systemName: "chart.bar.doc.horizontal.fill"),
             selectedImage: nil
         )
-        peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
+        peopleSearchCoordinator = RoadmapCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
-
-        historyNavigationController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage(systemName: "archivebox.fill"),
-            selectedImage: nil
-        )
-        historyCoordinator = HistoryCoordinator(presenter: historyNavigationController)
         tabViewController.selectedIndex = 1
-        historyCoordinator?.start()
     }
 }
