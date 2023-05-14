@@ -42,22 +42,22 @@
 		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
 		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
 		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
-		EB85B9E02A11207700566234 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; };
-		EB85B9E12A11207700566234 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E72A112D2400566234 /* Date+Extensions.swift */; };
 		EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */; };
+		EB85B9EB2A11598F00566234 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; };
+		EB85B9EC2A11598F00566234 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
 		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB85B9E22A11207700566234 /* Embed Frameworks */ = {
+		EB85B9ED2A11598F00566234 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB85B9E12A11207700566234 /* Ganttis.xcframework in Embed Frameworks */,
+				EB85B9EC2A11598F00566234 /* Ganttis.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB85B9E02A11207700566234 /* Ganttis.xcframework in Frameworks */,
+				EB85B9EB2A11598F00566234 /* Ganttis.xcframework in Frameworks */,
 				057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +403,7 @@
 				CA944D0C2A0E91220095AEEB /* Resources */,
 				ACA553DC5DB240E3B3284370 /* [CP] Embed Pods Frameworks */,
 				CA2410982A0F75D90068CFCA /* SwiftLint */,
-				EB85B9E22A11207700566234 /* Embed Frameworks */,
+				EB85B9ED2A11598F00566234 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
