@@ -49,11 +49,11 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
     private func reloadChart(_ items: [GanttChartItem]) {
         let headerController = GanttChartHeaderController()
         let contentController = GanttChartContentController(items: items)
-        contentController.desiredScrollableRowCount = 10
         contentController.scrollableTimeline = TimeRange(
-            from: Time(year: 2023, month: 05, day: 14), // items[0].start,
-            to: Time(year: 2025, month: 05, day: 14) // items[items.count - 1].finish.adding(weeks: 1)
+            from: .current,
+            to: .current.adding(weeks: 52)
         )
+        contentController.timeScale = .intervals(period: 10, unit: .weeks, origin: .current, rule: .down)
         let controller = GanttChartController(
             headerController: headerController,
             contentController: contentController

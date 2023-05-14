@@ -24,7 +24,7 @@ final class RoadmapViewModel {
         }
         Task {
             let body = ScheduleRequestBody(
-                desiredDate: "2024-01-01", // date,
+                desiredDate: "2023-08-14", // date,
                 categories: user.categories
             )
             let request = ScheduleAPIRequest(body: body)
