@@ -7,42 +7,18 @@
 
 import UIKit
 import GanttisTouch
+import Combine
 
 final class RoadmapViewController: UIViewController, StoryboardInstantiable {
 
+    private var cancellables = Set<AnyCancellable>()
     private var ganttChartView = GanttChart()
     var viewModel: RoadmapViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let data = RoadmapData.mock()
-        let subCategories = data.flatMap { $0.subCategories }
-        var items = [GanttChartItem]()
-        for index in 0..<subCategories.count {
-            let item = subCategories[index]
-
-            items.append(
-                GanttChartItem(
-                    label: item.subCategory,
-                    row: index,
-                    start: item.start.ganttisTime(),
-                    finish: item.end.ganttisTime()
-                )
-            )
-        }
         view.addSubview(ganttChartView)
-        let headerController = GanttChartHeaderController()
-        let contentController = GanttChartContentController(items: items)
-        contentController.desiredScrollableRowCount = 10
-        contentController.scrollableTimeline = TimeRange(
-            from: items[0].start,
-            to: items[items.count - 2].finish.adding(weeks: 2)
-        )
-        let controller = GanttChartController(
-            headerController: headerController,
-            contentController: contentController
-        )
-        ganttChartView.controller = controller
+        bindViewModel()
     }
 
     override func viewWillLayoutSubviews() {
@@ -50,7 +26,33 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
         ganttChartView.frame = view.bounds
     }
 
-    private func reloadChart(_ data: ) {
-        
+    private func bindViewModel() {
+        viewModel?.dataSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                switch state {
+                case .loading:
+                    return
+
+                case let .reloadData(items):
+                    self?.reloadChart(items)
+                }
+            }.store(in: &cancellables)
+    }
+
+    private func reloadChart(_ items: [GanttChartItem]) {
+        let headerController = GanttChartHeaderController()
+        let contentController = GanttChartContentController(items: items)
+        contentController.desiredScrollableRowCount = 10
+        contentController.scrollableTimeline = TimeRange(
+            from: Time(year: 2023, month: 05, day: 14), // items[0].start,
+            to: Time(year: 2025, month: 05, day: 14) // items[items.count - 1].finish.adding(weeks: 1)
+        )
+        let controller = GanttChartController(
+            headerController: headerController,
+            contentController: contentController
+        )
+        controller.contentController.timeScale = .intervalsWith(period: 1, in: .weeks)
+        ganttChartView.controller = controller
     }
 }
