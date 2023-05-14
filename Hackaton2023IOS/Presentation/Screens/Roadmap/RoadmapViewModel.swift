@@ -13,6 +13,7 @@ final class RoadmapViewModel {
     enum State {
         case loading
         case reloadData([GanttChartItem])
+        case error(Error)
     }
     var dataSubject = CurrentValueSubject<State, Never>(.loading)
 
@@ -23,8 +24,11 @@ final class RoadmapViewModel {
             return
         }
         Task {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+
             let body = ScheduleRequestBody(
-                desiredDate: "2023-08-14", // date,
+                desiredDate: dateFormatter.string(from: date), // date,
                 categories: user.categories
             )
             let request = ScheduleAPIRequest(body: body)
@@ -32,7 +36,7 @@ final class RoadmapViewModel {
                 let response = try await apiClient.sendRequest(request)
                 setRoadmap(response)
             } catch {
-                throw error
+                dataSubject.send(.error(error))
             }
         }
     }

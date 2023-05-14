@@ -30,6 +30,7 @@
 		CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */; };
 		CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; };
 		CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CA9F3E1C2A11606600C93E90 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -92,6 +93,7 @@
 		CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effective_Programming_for_America_logo.svg.png; sourceTree = "<group>"; };
 		CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = Hackaton2023IOS/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
+		CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Hackaton2023IOS/Ganttis/Ganttis.xcframework/UIColor+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */,
+				CA9F3E1B2A11606600C93E90 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				B26CDDAB2A0FD79000F4177D /* SectionInfoBuilder.swift in Sources */,
 				CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */,
 				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
+				CA9F3E1C2A11606600C93E90 /* UIColor+Extensions.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
 				EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */,
 				B26CDDA62A0F899600F4177D /* MockAPIClient.swift in Sources */,

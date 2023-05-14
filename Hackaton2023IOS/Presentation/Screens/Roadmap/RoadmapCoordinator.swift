@@ -18,7 +18,6 @@ final class RoadmapCoordinator: Coordinator {
     func start() {
         let viewController = RoadmapViewController.instantiateViewController()
         viewController.viewModel = RoadmapViewModel()
-        viewController.viewModel?.sendRequest(date: Date(timeIntervalSinceNow: 800000))
         presenter.pushViewController(viewController, animated: false)
         self.viewController = viewController
     }

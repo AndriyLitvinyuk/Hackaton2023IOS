@@ -16,18 +16,14 @@ final class TabBarCoordinator: Coordinator {
     private var myProfileCoordinator: ProfileCoordinator?
     private let peopleSearchNavigationController: UINavigationController
     private var peopleSearchCoordinator: RoadmapCoordinator?
-    private let historyNavigationController: UINavigationController
-    private var historyCoordinator: HistoryCoordinator?
 
     init(presenter: UIViewController) {
         self.presenter = presenter
         myProfileNavigationController = UINavigationController.defaultNavigationController()
         peopleSearchNavigationController = UINavigationController.defaultNavigationController()
-        historyNavigationController = UINavigationController.defaultNavigationController()
         viewControllersInPresenter = [
             myProfileNavigationController,
-            peopleSearchNavigationController,
-            historyNavigationController
+            peopleSearchNavigationController
         ]
         tabViewController = Self.createTabBar()
     }
@@ -40,7 +36,7 @@ final class TabBarCoordinator: Coordinator {
         tabViewController.tabBar.layer.shadowRadius = 6
         tabViewController.tabBar.layer.shadowColor = UIColor.black.cgColor
         tabViewController.tabBar.layer.shadowOpacity = 0.3
-        tabViewController.tabBar.tintColor = UIColor(red: 133/255, green: 126/255, blue: 208/255, alpha: 1)
+        tabViewController.tabBar.tintColor = .primaryColor
         tabViewController.modalPresentationStyle = .fullScreen
         return tabViewController
     }
@@ -64,14 +60,6 @@ final class TabBarCoordinator: Coordinator {
         )
         peopleSearchCoordinator = RoadmapCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
-
-        historyNavigationController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage(systemName: "archivebox.fill"),
-            selectedImage: nil
-        )
-        historyCoordinator = HistoryCoordinator(presenter: historyNavigationController)
         tabViewController.selectedIndex = 1
-        historyCoordinator?.start()
     }
 }
