@@ -17,10 +17,11 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
     private enum Constants {
         static let cellHeight: CGFloat = 100
         static let cellReuseIdentifier = "PeopleSearchCell"
+        static let navBarTitle = "People search"
     }
 
     weak var delegate: PeopleSearchViewControllerDelegate?
-    private let viewModel = PeopleSearchViewModel()
+    var viewModel: PeopleSearchViewModel?
     private var cancellables = Set<AnyCancellable>()
     private let searchController = UISearchController()
 
@@ -33,12 +34,30 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchControllerSetup()
+        setupNavigationBar()
+        setupCollectionView()
+        bindViewModel()
+    }
+
+    // MARK: - Private setup functions
+
+    private func searchControllerSetup() {
         searchController.searchBar.delegate = self
-        navigationItem.searchController = searchController
+    }
+
+    private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
 
-        viewModel.reloadSubject
+    private func setupNavigationBar() {
+        navigationItem.searchController = searchController
+        navigationItem.title = Constants.navBarTitle
+    }
+
+    private func bindViewModel() {
+        viewModel?.reloadSubject
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
             self?.collectionView.reloadData()
@@ -46,26 +65,31 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
     }
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension PeopleSearchViewController: UICollectionViewDataSource {
 
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
+        guard let viewModel,
+              let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: Constants.cellReuseIdentifier,
             for: indexPath
         ) as? PeopleSearchCell else {
-            fatalError()
+            return UICollectionViewCell()
         }
         cell.setupCell(model: viewModel.cellModelFor(indexPath.item))
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.profiles.count
+        viewModel?.profiles.count ?? 0
     }
 }
+
+// MARK: - UICollectionViewDelegateFlowLayout
 
 extension PeopleSearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(
@@ -77,9 +101,11 @@ extension PeopleSearchViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - UISearchBarDelegate
+
 extension PeopleSearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else {
+        guard let text = searchBar.text, let viewModel else {
             return
         }
         searchBar.endEditing(true)
@@ -87,12 +113,15 @@ extension PeopleSearchViewController: UISearchBarDelegate {
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.cancel()
+        viewModel?.cancel()
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension PeopleSearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewModel else { return }
         delegate?.selectedProfile(profile: viewModel.profiles[indexPath.item])
     }
 }

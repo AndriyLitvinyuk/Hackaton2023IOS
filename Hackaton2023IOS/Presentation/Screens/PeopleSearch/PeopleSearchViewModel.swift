@@ -5,6 +5,7 @@
 //  Created by Kostiantyn Koloskov on 13.05.2023.
 //
 
+import Dispatch
 import Combine
 
 class PeopleSearchViewModel {
@@ -13,9 +14,11 @@ class PeopleSearchViewModel {
 
     func search(promt: String) {
         profiles = Array.init(repeating: User.defaultUser, count: 15)
-        reloadSubject.send(())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.reloadSubject.send(())
+        }
     }
-    
+
     func cellModelFor(_ index: Int) -> PeopleSearchCellModel {
         let user = profiles[index]
         return PeopleSearchCellModel(

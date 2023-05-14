@@ -18,11 +18,14 @@ final class PeopleSearchCoordinator: Coordinator {
 
     func start() {
         let viewController = PeopleSearchViewController.instantiateViewController()
+        viewController.viewModel = PeopleSearchViewModel()
         presenter.pushViewController(viewController, animated: false)
         viewController.delegate = self
         self.viewController = viewController
     }
 }
+
+// MARK: - PeopleSearchViewControllerDelegate
 
 extension PeopleSearchCoordinator: PeopleSearchViewControllerDelegate {
     func selectedProfile(profile: User) {

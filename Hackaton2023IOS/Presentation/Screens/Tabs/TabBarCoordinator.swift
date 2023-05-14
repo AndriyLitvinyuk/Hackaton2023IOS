@@ -48,6 +48,7 @@ final class TabBarCoordinator: Coordinator {
             image: nil,
             selectedImage: nil
         )
+        peopleSearchNavigationController.navigationBar.backgroundColor = .white
         peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
 
