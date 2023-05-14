@@ -31,7 +31,7 @@ extension ProfileViewControllerTableModel: UITableViewDataSource {
         let row = sectionInfo[indexPath.section].cells[indexPath.row]
         switch row {
         case .subCategoryCell(let subCategory):
-            let cell = ProfileSubCategoryTableViewCell()
+            let cell = ProfileSubcategoryTableViewCell()
             cell.applyCell(subCategory: subCategory)
             cell.isUserInteractionEnabled = false
             return cell

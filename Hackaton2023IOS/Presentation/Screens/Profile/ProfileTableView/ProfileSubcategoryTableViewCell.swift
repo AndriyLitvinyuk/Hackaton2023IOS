@@ -1,5 +1,5 @@
 //
-//  ProfileSubCategoryTableViewCell.swift
+//  ProfileSubcategoryTableViewCell.swift
 //  Hackaton2023IOS
 //
 //  Created by Andrii Lytvyniuk on 14.05.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ProfileSubCategoryTableViewCell: UITableViewCell {
+final class ProfileSubcategoryTableViewCell: UITableViewCell {
     lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             categoryLabel,
