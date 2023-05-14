@@ -29,30 +29,49 @@ final class TabBarCoordinator: Coordinator {
             peopleSearchNavigationController,
             historyNavigationController
         ]
-        tabViewController = UITabBarController()
+        tabViewController = Self.createTabBar()
+    }
+
+    private static func createTabBar() -> UITabBarController {
+        let tabViewController = UITabBarController()
         tabViewController.tabBar.barTintColor = .black
         tabViewController.tabBar.backgroundColor = .white
+        tabViewController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabViewController.tabBar.layer.shadowRadius = 6
+        tabViewController.tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabViewController.tabBar.layer.shadowOpacity = 0.3
+        tabViewController.tabBar.tintColor = UIColor(red: 133/255, green: 126/255, blue: 208/255, alpha: 1)
+        tabViewController.modalPresentationStyle = .fullScreen
+        return tabViewController
     }
 
     func start() {
-        tabViewController.modalPresentationStyle = .fullScreen
         presenter.present(tabViewController, animated: false)
         tabViewController.viewControllers = viewControllersInPresenter
 
-        myProfileNavigationController.tabBarItem = UITabBarItem(title: "PDP", image: nil, selectedImage: nil)
+        myProfileNavigationController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "person.fill"),
+            selectedImage: nil
+        )
         myProfileCoordinator = ProfileCoordinator(presenter: myProfileNavigationController)
         myProfileCoordinator?.start()
 
         peopleSearchNavigationController.tabBarItem = UITabBarItem(
-            title: "People search",
-            image: nil,
+            title: nil,
+            image: UIImage(systemName: "chart.bar.doc.horizontal.fill"),
             selectedImage: nil
         )
         peopleSearchCoordinator = RoadmapCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
 
-        historyNavigationController.tabBarItem = UITabBarItem(title: "History", image: nil, selectedImage: nil)
+        historyNavigationController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "archivebox.fill"),
+            selectedImage: nil
+        )
         historyCoordinator = HistoryCoordinator(presenter: historyNavigationController)
+        tabViewController.selectedIndex = 1
         historyCoordinator?.start()
     }
 }

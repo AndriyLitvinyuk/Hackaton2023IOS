@@ -20,7 +20,6 @@
 		CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8464322A0FCB0C00103835 /* ProfileTableView.swift */; };
 		CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D112A0E91220095AEEB /* AppDelegate.swift */; };
 		CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D132A0E91220095AEEB /* SceneDelegate.swift */; };
-		CA944D162A0E91220095AEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA944D152A0E91220095AEEB /* ViewController.swift */; };
 		CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1A2A0E91240095AEEB /* Assets.xcassets */; };
 		CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */; };
 		CA9F3E062A10F71600C93E90 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E052A10F71600C93E90 /* Category.swift */; };
@@ -28,6 +27,7 @@
 		CA9F3E0B2A111C7A00C93E90 /* ScheduleAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0A2A111C7A00C93E90 /* ScheduleAPIRequest.swift */; };
 		CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */; };
 		CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */; };
+		CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -81,7 +81,6 @@
 		CA944D0E2A0E91220095AEEB /* Hackaton2023IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackaton2023IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA944D112A0E91220095AEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA944D132A0E91220095AEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA944D152A0E91220095AEEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA944D1A2A0E91240095AEEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA944D1D2A0E91240095AEEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA944D1F2A0E91240095AEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		CA9F3E0A2A111C7A00C93E90 /* ScheduleAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIRequest.swift; sourceTree = "<group>"; };
 		CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestBody.swift; sourceTree = "<group>"; };
 		CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
+		CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effective_Programming_for_America_logo.svg.png; sourceTree = "<group>"; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -147,9 +147,10 @@
 			children = (
 				CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */,
 				EB6A8B742A0FA04B009CC728 /* Application */,
-				EBA313232A0F9E3100A80328 /* Coordinator */,
-				B26CDD932A0F6E4D00F4177D /* Screens */,
 				B26CDD942A0F6E6500F4177D /* Common */,
+				EBA313232A0F9E3100A80328 /* Coordinator */,
+				CA9F3E112A11383200C93E90 /* Resources */,
+				B26CDD932A0F6E4D00F4177D /* Screens */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -157,7 +158,6 @@
 		B26CDD932A0F6E4D00F4177D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CA944D152A0E91220095AEEB /* ViewController.swift */,
 				EB6A8B772A0FA08D009CC728 /* Tabs */,
 				EB6A8B882A0FA98E009CC728 /* History */,
 				EB6A8B812A0FA8DB009CC728 /* Roadmap */,
@@ -297,6 +297,14 @@
 				CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		CA9F3E112A11383200C93E90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EB6A8B712A0FA010009CC728 /* StoryboardInstantiable */ = {
@@ -445,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */,
+				CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */,
 				CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */,
 				EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */,
 				EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */,
@@ -525,7 +534,6 @@
 				EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */,
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
 				CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */,
-				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
 				EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */,
 				EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */,
