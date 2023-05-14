@@ -8,14 +8,14 @@
 import Foundation
 import Lottie
 
-public final class SearchAnimationView: LottieAnimationView {
+public final class LoadingAnimationView: LottieAnimationView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadAnimation()
     }
 
     private func loadAnimation() {
-        self.animation = LottieAnimation.asset("search-users")
+        self.animation = LottieAnimation.asset("yarn-loading-saving")
         self.contentMode = .scaleAspectFit
         self.loopMode = .loop
     }
