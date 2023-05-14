@@ -31,13 +31,17 @@
 		EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */; };
 		EB6A8B7E2A0FA6BB009CC728 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */; };
 		EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */; };
-		EB6A8B832A0FA8F1009CC728 /* PeopleSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */; };
-		EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */; };
-		EB6A8B872A0FA909009CC728 /* PeopleSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */; };
+		EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */; };
+		EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */; };
+		EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */; };
 		EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */; };
 		EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */; };
 		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
 		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
+		EB85B9D22A1105BB00566234 /* roadmap_mock.json in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D12A1105BB00566234 /* roadmap_mock.json */; };
+		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
+		EB85B9D62A1108F600566234 /* RoadmapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D52A1108F600566234 /* RoadmapData.swift */; };
+		EB85B9D72A110B2500566234 /* roadmap_mock.json in Resources */ = {isa = PBXBuildFile; fileRef = EB85B9D12A1105BB00566234 /* roadmap_mock.json */; };
 		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
 		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
@@ -71,13 +75,16 @@
 		EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchCoordinator.swift; sourceTree = "<group>"; };
-		EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchViewController.swift; sourceTree = "<group>"; };
-		EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleSearchViewController.storyboard; sourceTree = "<group>"; };
+		EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapCoordinator.swift; sourceTree = "<group>"; };
+		EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapViewController.swift; sourceTree = "<group>"; };
+		EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoadmapViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B892A0FA9A0009CC728 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "Hackaton2023IOS/Presentation/Screens/History/UINavigationController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		EB85B9D12A1105BB00566234 /* roadmap_mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = roadmap_mock.json; sourceTree = "<group>"; };
+		EB85B9D32A11074000566234 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
+		EB85B9D52A1108F600566234 /* RoadmapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapData.swift; sourceTree = "<group>"; };
 		EBA313242A0F9E4000A80328 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EBA313262A0F9E8000A80328 /* DefaultFileName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFileName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EB6A8B882A0FA98E009CC728 /* History */,
-				EB6A8B812A0FA8DB009CC728 /* PeopleSearch */,
+				EB6A8B812A0FA8DB009CC728 /* Roadmap */,
 				EB6A8B7A2A0FA65D009CC728 /* Profile */,
 				EB6A8B772A0FA08D009CC728 /* Tabs */,
 				CA944D172A0E91220095AEEB /* Main.storyboard */,
@@ -159,6 +166,7 @@
 		B26CDD982A0F6EC800F4177D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EB85B9D02A11058800566234 /* Mock */,
 				B26CDD992A0F6EE500F4177D /* Models */,
 				B26CDD9A2A0F6EF100F4177D /* Services */,
 				B26CDD9B2A0F6EFC00F4177D /* Repositories */,
@@ -170,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B26CDDB12A0FE1F200F4177D /* User.swift */,
+				EB85B9D52A1108F600566234 /* RoadmapData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,14 +326,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		EB6A8B812A0FA8DB009CC728 /* PeopleSearch */ = {
+		EB6A8B812A0FA8DB009CC728 /* Roadmap */ = {
 			isa = PBXGroup;
 			children = (
-				EB6A8B822A0FA8F1009CC728 /* PeopleSearchCoordinator.swift */,
-				EB6A8B842A0FA8FD009CC728 /* PeopleSearchViewController.swift */,
-				EB6A8B862A0FA909009CC728 /* PeopleSearchViewController.storyboard */,
+				EB6A8B822A0FA8F1009CC728 /* RoadmapCoordinator.swift */,
+				EB6A8B842A0FA8FD009CC728 /* RoadmapViewController.swift */,
+				EB6A8B862A0FA909009CC728 /* RoadmapViewController.storyboard */,
+				EB85B9D12A1105BB00566234 /* roadmap_mock.json */,
 			);
-			path = PeopleSearch;
+			path = Roadmap;
 			sourceTree = "<group>";
 		};
 		EB6A8B882A0FA98E009CC728 /* History */ = {
@@ -341,8 +351,16 @@
 			isa = PBXGroup;
 			children = (
 				EBA313262A0F9E8000A80328 /* DefaultFileName.swift */,
+				EB85B9D32A11074000566234 /* JsonReader.swift */,
 			);
 			path = FileName;
+			sourceTree = "<group>";
+		};
+		EB85B9D02A11058800566234 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		EBA313232A0F9E3100A80328 /* Coordinator */ = {
@@ -414,10 +432,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB85B9D72A110B2500566234 /* roadmap_mock.json in Resources */,
 				CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */,
 				CA944D1B2A0E91240095AEEB /* Assets.xcassets in Resources */,
 				CA944D192A0E91220095AEEB /* Main.storyboard in Resources */,
-				EB6A8B872A0FA909009CC728 /* PeopleSearchViewController.storyboard in Resources */,
+				EB6A8B872A0FA909009CC728 /* RoadmapViewController.storyboard in Resources */,
 				EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */,
 				EB6A8B7E2A0FA6BB009CC728 /* ProfileViewController.storyboard in Resources */,
 			);
@@ -496,11 +515,13 @@
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
-				EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */,
+				EB6A8B852A0FA8FD009CC728 /* RoadmapViewController.swift in Sources */,
 				EB6A8B7C2A0FA673009CC728 /* ProfileCoordinator.swift in Sources */,
+				EB85B9D42A11074000566234 /* JsonReader.swift in Sources */,
 				CA944D122A0E91220095AEEB /* AppDelegate.swift in Sources */,
 				EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */,
 				B26CDDAB2A0FD79000F4177D /* SectionInfoBuilder.swift in Sources */,
+				EB85B9D62A1108F600566234 /* RoadmapData.swift in Sources */,
 				CA8464332A0FCB0C00103835 /* ProfileTableView.swift in Sources */,
 				EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */,
 				CA944D142A0E91220095AEEB /* SceneDelegate.swift in Sources */,
@@ -509,7 +530,8 @@
 				EB6A8B8A2A0FA9A0009CC728 /* HistoryCoordinator.swift in Sources */,
 				B26CDDA22A0F88AD00F4177D /* APIRequest.swift in Sources */,
 				B26CDD972A0F6E9800F4177D /* Constants.swift in Sources */,
-				EB6A8B832A0FA8F1009CC728 /* PeopleSearchCoordinator.swift in Sources */,
+				EB85B9D22A1105BB00566234 /* roadmap_mock.json in Sources */,
+				EB6A8B832A0FA8F1009CC728 /* RoadmapCoordinator.swift in Sources */,
 				EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */,
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,

@@ -15,7 +15,7 @@ final class TabBarCoordinator: Coordinator {
     private let myProfileNavigationController: UINavigationController
     private var myProfileCoordinator: ProfileCoordinator?
     private let peopleSearchNavigationController: UINavigationController
-    private var peopleSearchCoordinator: PeopleSearchCoordinator?
+    private var peopleSearchCoordinator: RoadmapCoordinator?
     private let historyNavigationController: UINavigationController
     private var historyCoordinator: HistoryCoordinator?
 
@@ -48,7 +48,7 @@ final class TabBarCoordinator: Coordinator {
             image: nil,
             selectedImage: nil
         )
-        peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
+        peopleSearchCoordinator = RoadmapCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
 
         historyNavigationController.tabBarItem = UITabBarItem(title: "History", image: nil, selectedImage: nil)

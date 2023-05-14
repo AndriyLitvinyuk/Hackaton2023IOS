@@ -7,16 +7,16 @@
 
 import UIKit
 
-final class PeopleSearchCoordinator: Coordinator {
+final class RoadmapCoordinator: Coordinator {
     private let presenter: UINavigationController
-    private weak var viewController: PeopleSearchViewController?
+    private weak var viewController: RoadmapViewController?
 
     init(presenter: UINavigationController) {
         self.presenter = presenter
     }
 
     func start() {
-        let viewController = PeopleSearchViewController.instantiateViewController()
+        let viewController = RoadmapViewController.instantiateViewController()
         presenter.pushViewController(viewController, animated: false)
         self.viewController = viewController
     }
