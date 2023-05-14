@@ -30,7 +30,6 @@ final class RoadmapViewModel {
             let request = ScheduleAPIRequest(body: body)
             do {
                 let response = try await apiClient.sendRequest(request)
-                let scheduleResponse = response as [ScheduleResponse]
                 setRoadmap(response)
             } catch {
                 throw error
