@@ -44,6 +44,7 @@
 		EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */; };
 		EB6A8B8E2A0FA9BF009CC728 /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */; };
 		EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */; };
+		EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */; };
 		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
 		EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E72A112D2400566234 /* Date+Extensions.swift */; };
 		EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */; };
@@ -106,6 +107,7 @@
 		EB6A8B8B2A0FA9B5009CC728 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EB6A8B8D2A0FA9BF009CC728 /* HistoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		EB6A8B8F2A0FAAFB009CC728 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extensions.swift"; path = "Hackaton2023IOS/Presentation/Screens/History/UINavigationController+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gantt+Extensions.swift"; sourceTree = "<group>"; };
 		EB85B9D32A11074000566234 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		EB85B9DF2A11207700566234 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = ../TryGantt/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
 		EB85B9E72A112D2400566234 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				CA8464152A0F98B800103835 /* Views */,
 				B26CDD952A0F6E7B00F4177D /* Extensions */,
 				EB85B9E72A112D2400566234 /* Date+Extensions.swift */,
+				EB791C492A115F0C000D41D9 /* Gantt+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */,
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
+				EB791C4A2A115F0C000D41D9 /* Gantt+Extensions.swift in Sources */,
 				B26CDDAE2A0FD8F600F4177D /* SectionInfo.swift in Sources */,
 				CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */,
 				CA9F3E062A10F71600C93E90 /* Category.swift in Sources */,

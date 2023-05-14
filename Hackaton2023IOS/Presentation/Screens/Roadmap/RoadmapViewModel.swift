@@ -13,15 +13,14 @@ final class RoadmapViewModel {
     enum State {
         case loading
         case reloadData([GanttChartItem])
+        case error(Error)
     }
     var dataSubject = CurrentValueSubject<State, Never>(.loading)
 
     private let apiClient = URLSessionAPIClient()
 
     func sendRequest(date: Date) {
-        guard
-            let user = UserInfoSingleton.shared.user,
-            let date = Calendar.current.date(byAdding: .year, value: 1, to: Date()) else {
+        guard let user = UserInfoSingleton.shared.user else {
             return
         }
         Task {
@@ -35,28 +34,38 @@ final class RoadmapViewModel {
             let request = ScheduleAPIRequest(body: body)
             do {
                 let response = try await apiClient.sendRequest(request)
-                let scheduleResponse = response as [ScheduleResponse]
                 setRoadmap(response)
             } catch {
-//                fatalError()
+                dataSubject.send(.error(error))
             }
         }
     }
 
     private func setRoadmap(_ data: [ScheduleResponse]) {
-        let subCategories = data.flatMap { $0.subCategories }
+        let subCategories = data.flatMap { category in
+            category.subCategories.map { subCategory in
+                (subCategory, category.category)
+            }
+        }
+        let categories = data.map { $0.category }
+        var categoryColors = [String: GanttisTouch.Color]()
+        for index in 0..<categories.count {
+            let colors = GanttisTouch.Color.allDefaultColors
+            let colorIndex = index < colors.count ? index : colors.count % index
+            categoryColors[categories[index]] = GanttisTouch.Color.allDefaultColors[colorIndex]
+        }
         var items = [GanttChartItem]()
         for index in 0..<subCategories.count {
             let item = subCategories[index]
-
-            items.append(
-                GanttChartItem(
-                    label: item.subCategory,
-                    row: index,
-                    start: item.start.ganttisTime() ?? Time(Date()),
-                    finish: item.end.ganttisTime() ?? Time(Date())
-                )
+            let chartItem = GanttChartItem(
+                label: item.0.subCategory,
+                row: index,
+                start: item.0.start.ganttisTime() ?? Time(Date()),
+                finish: item.0.end.ganttisTime() ?? Time(Date())
             )
+            chartItem.style.barFillColor = categoryColors[item.1]
+
+            items.append(chartItem)
         }
         dataSubject.send(.reloadData(items))
     }

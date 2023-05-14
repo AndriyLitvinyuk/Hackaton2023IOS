@@ -44,6 +44,7 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
         super.viewDidLoad()
         setUpViews()
         setUpConstraints()
+        addChart()
     }
 
     @objc func generateChartButtonPressed() {
@@ -69,9 +70,15 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
         ])
     }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        ganttChartView.frame = view.bounds
+    private func addChart() {
+        view.addSubview(ganttChartView)
+        ganttChartView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            ganttChartView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            ganttChartView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            ganttChartView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            ganttChartView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+        ])
     }
 
     private func generateChart() {
@@ -95,6 +102,7 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
         let loadingAnimation = LoadingAnimationView(frame: .init(x: 0, y: 0, width: 300, height: 300))
         loadingAnimation.center = view.center
         view.addSubview(loadingAnimation)
+
         viewModel?.dataSubject
             .receive(on: DispatchQueue.main)
             .sink { state in
@@ -103,7 +111,7 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
                     loadingAnimation.play()
                     return
 
-                case .reloadData:
+                case .reloadData, .error:
                     loadingAnimation.stop()
                     UIView.animate(withDuration: 0.5, animations: {
                         loadingAnimation.alpha = 0
@@ -119,11 +127,10 @@ final class RoadmapViewController: UIViewController, StoryboardInstantiable {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] state in
                 switch state {
-                case .loading:
-                    return
-
                 case let .reloadData(items):
                     self?.reloadChart(items)
+                default:
+                    return
                 }
             }.store(in: &cancellables)
     }
