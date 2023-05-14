@@ -27,6 +27,9 @@
 		CA944D1E2A0E91240095AEEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA944D1C2A0E91240095AEEB /* LaunchScreen.storyboard */; };
 		CA9F3E062A10F71600C93E90 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E052A10F71600C93E90 /* Category.swift */; };
 		CA9F3E082A10FB0D00C93E90 /* ProfileSubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E072A10FB0D00C93E90 /* ProfileSubcategoryTableViewCell.swift */; };
+		CA9F3E0B2A111C7A00C93E90 /* ScheduleAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0A2A111C7A00C93E90 /* ScheduleAPIRequest.swift */; };
+		CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */; };
+		CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -69,6 +72,9 @@
 		CA944D1F2A0E91240095AEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9F3E052A10F71600C93E90 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		CA9F3E072A10FB0D00C93E90 /* ProfileSubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSubcategoryTableViewCell.swift; sourceTree = "<group>"; };
+		CA9F3E0A2A111C7A00C93E90 /* ScheduleAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAPIRequest.swift; sourceTree = "<group>"; };
+		CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestBody.swift; sourceTree = "<group>"; };
+		CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -231,6 +237,8 @@
 				B26CDDA12A0F88AC00F4177D /* APIRequest.swift */,
 				B26CDDA32A0F898700F4177D /* APIClient.swift */,
 				B26CDDA52A0F899600F4177D /* MockAPIClient.swift */,
+				CA9F3E092A111C5C00C93E90 /* Requests */,
+				CA9F3E0E2A111FA300C93E90 /* Responses */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -285,6 +293,23 @@
 			path = Hackaton2023IOS;
 			sourceTree = "<group>";
 		};
+		CA9F3E092A111C5C00C93E90 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3E0A2A111C7A00C93E90 /* ScheduleAPIRequest.swift */,
+				CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CA9F3E0E2A111FA300C93E90 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		EB6A8B712A0FA010009CC728 /* StoryboardInstantiable */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,10 +339,10 @@
 		EB6A8B7A2A0FA65D009CC728 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CA84642F2A0FC11200103835 /* ProfileViewModel.swift */,
-				EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */,
 				EB6A8B7D2A0FA6BB009CC728 /* ProfileViewController.storyboard */,
 				EB6A8B7B2A0FA672009CC728 /* ProfileCoordinator.swift */,
+				EB6A8B7F2A0FA6CD009CC728 /* ProfileViewController.swift */,
+				CA84642F2A0FC11200103835 /* ProfileViewModel.swift */,
 				B26CDDAC2A0FD8CE00F4177D /* ProfileTableView */,
 			);
 			path = Profile;
@@ -501,6 +526,7 @@
 				CA9F3E082A10FB0D00C93E90 /* ProfileSubcategoryTableViewCell.swift in Sources */,
 				EB6A8B802A0FA6CD009CC728 /* ProfileViewController.swift in Sources */,
 				EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */,
+				CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */,
 				CA944D162A0E91220095AEEB /* ViewController.swift in Sources */,
 				EB6A8B902A0FAAFB009CC728 /* UINavigationController+Extensions.swift in Sources */,
 				EB6A8B852A0FA8FD009CC728 /* PeopleSearchViewController.swift in Sources */,
@@ -521,9 +547,11 @@
 				CA8464312A0FC11200103835 /* ProfileViewModel.swift in Sources */,
 				EB6A8B8C2A0FA9B5009CC728 /* HistoryViewController.swift in Sources */,
 				B26CDDAE2A0FD8F600F4177D /* SectionInfo.swift in Sources */,
+				CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */,
 				CA9F3E062A10F71600C93E90 /* Category.swift in Sources */,
 				B26CDDB02A0FD9C700F4177D /* ProfileViewControllerTableModel.swift in Sources */,
 				CA8464172A0F98B800103835 /* SearchAnivationView.swift in Sources */,
+				CA9F3E0B2A111C7A00C93E90 /* ScheduleAPIRequest.swift in Sources */,
 				B26CDDA42A0F898700F4177D /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
