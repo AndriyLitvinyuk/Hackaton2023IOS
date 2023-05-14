@@ -29,17 +29,23 @@ final class TabBarCoordinator: Coordinator {
             peopleSearchNavigationController,
             historyNavigationController
         ]
-        tabViewController = UITabBarController()
+        tabViewController = Self.createTabBar()
+    }
+
+    private static func createTabBar() -> UITabBarController {
+        let tabViewController = UITabBarController()
         tabViewController.tabBar.barTintColor = .black
         tabViewController.tabBar.backgroundColor = .white
         tabViewController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
         tabViewController.tabBar.layer.shadowRadius = 6
         tabViewController.tabBar.layer.shadowColor = UIColor.black.cgColor
         tabViewController.tabBar.layer.shadowOpacity = 0.3
+        tabViewController.tabBar.tintColor = UIColor(red: 133/255, green: 126/255, blue: 208/255, alpha: 1)
+        tabViewController.modalPresentationStyle = .fullScreen
+        return tabViewController
     }
 
     func start() {
-        tabViewController.modalPresentationStyle = .fullScreen
         presenter.present(tabViewController, animated: false)
         tabViewController.viewControllers = viewControllersInPresenter
 
