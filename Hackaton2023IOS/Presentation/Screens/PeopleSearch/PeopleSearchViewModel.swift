@@ -9,13 +9,20 @@ import Dispatch
 import Combine
 
 class PeopleSearchViewModel {
-    var reloadSubject = CurrentValueSubject<Void, Never>(())
+    enum State {
+        case idle
+        case animating
+        case reloadData
+    }
+
+    var stateSubject = CurrentValueSubject<State, Never>(.idle)
     var profiles: [User] = []
 
     func search(promt: String) {
         profiles = Array.init(repeating: User.defaultUser, count: 15)
+        self.stateSubject.send(.animating)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.reloadSubject.send(())
+            self.stateSubject.send(.reloadData)
         }
     }
 
@@ -30,6 +37,6 @@ class PeopleSearchViewModel {
 
     func cancel() {
         profiles = []
-        reloadSubject.send(())
+        stateSubject.send(.idle)
     }
 }

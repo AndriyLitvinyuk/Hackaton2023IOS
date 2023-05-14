@@ -24,6 +24,7 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
     var viewModel: PeopleSearchViewModel?
     private var cancellables = Set<AnyCancellable>()
     private let searchController = UISearchController()
+    private var animationView: SearchAnimationView?
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -38,12 +39,19 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
         setupNavigationBar()
         setupCollectionView()
         bindViewModel()
+        setupAnimation()
     }
 
     // MARK: - Private setup functions
 
     private func searchControllerSetup() {
         searchController.searchBar.delegate = self
+    }
+
+    private func setupAnimation() {
+        let animationView = SearchAnimationView(frame: view.bounds)
+        view.addSubview(animationView)
+        self.animationView = animationView
     }
 
     private func setupCollectionView() {
@@ -57,10 +65,24 @@ final class PeopleSearchViewController: UIViewController, StoryboardInstantiable
     }
 
     private func bindViewModel() {
-        viewModel?.reloadSubject
+        viewModel?.stateSubject
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] in
-            self?.collectionView.reloadData()
+            .sink { [weak self] state in
+                switch state {
+                case .idle:
+                    self?.collectionView.reloadData()
+                    self?.animationView?.isHidden = false
+                    self?.animationView?.stop()
+
+                case .animating:
+                    self?.animationView?.isHidden = false
+                    self?.animationView?.play()
+
+                case .reloadData:
+                    self?.collectionView.reloadData()
+                    self?.animationView?.isHidden = true
+                    self?.animationView?.stop()
+                }
         }.store(in: &cancellables)
     }
 }
