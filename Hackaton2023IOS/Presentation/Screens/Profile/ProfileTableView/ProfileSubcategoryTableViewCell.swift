@@ -8,7 +8,7 @@
 import UIKit
 
 final class ProfileSubcategoryTableViewCell: UITableViewCell {
-    lazy var stackView: UIStackView = {
+    private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
             categoryLabel,
             currentLevel,
@@ -23,9 +23,9 @@ final class ProfileSubcategoryTableViewCell: UITableViewCell {
         return stackView
     }()
 
-    lazy var categoryLabel = UILabel()
-    lazy var currentLevel = LevelStackView()
-    lazy var desiredLevel = LevelStackView()
+    private lazy var categoryLabel = UILabel()
+    private lazy var currentLevel = LevelStackView()
+    private lazy var desiredLevel = LevelStackView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -55,8 +55,8 @@ final class ProfileSubcategoryTableViewCell: UITableViewCell {
 }
 
 final class LevelStackView: UIStackView {
-    lazy var titleLabel = UILabel()
-    lazy var levelLabel = UILabel()
+    private lazy var titleLabel = UILabel()
+    private lazy var levelLabel = UILabel()
 
     var titleText: String? {
         didSet {

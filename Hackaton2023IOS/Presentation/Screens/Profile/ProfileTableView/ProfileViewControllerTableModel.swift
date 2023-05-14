@@ -48,6 +48,3 @@ extension ProfileViewControllerTableModel: UITableViewDataSource {
         }
     }
 }
-
-extension ProfileViewControllerTableModel: UITableViewDelegate {
-}

@@ -34,7 +34,6 @@ private extension ProfileViewController {
         if let tableView = tableView {
             profileViewControllerTableModel?.profileTableView = tableView
             tableView.dataSource = profileViewControllerTableModel
-            tableView.delegate = profileViewControllerTableModel
             view.addSubview(tableView)
         }
     }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Category: Decodable {
-    struct SubCategory: Decodable {
+struct Category: Codable {
+    struct SubCategory: Codable {
         let subCategory: String
         let current: String
         let required: String
@@ -30,15 +30,4 @@ enum Level: String, RawRepresentable {
     case intermediate = "Intermediate"
     case advanced = "Advanced"
     case expert = "Expert"
-}
-
-extension Category {
-    static var defaultCategory: Category {
-        let engineeringSubCategories = [
-            Category.SubCategory(subCategory: "Swift", current: "Intermediate", required: "Advanced"),
-            Category.SubCategory(subCategory: "Objective-C", current: "Novice", required: "Intermediate")
-        ]
-
-        return Category(category: "Engineering", subCategories: engineeringSubCategories)
-    }
 }
