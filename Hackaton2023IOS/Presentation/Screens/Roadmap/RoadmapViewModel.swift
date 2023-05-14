@@ -25,8 +25,11 @@ final class RoadmapViewModel {
             return
         }
         Task {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+
             let body = ScheduleRequestBody(
-                desiredDate: "2024-01-01", // date,
+                desiredDate: dateFormatter.string(from: date), // date,
                 categories: user.categories
             )
             let request = ScheduleAPIRequest(body: body)
