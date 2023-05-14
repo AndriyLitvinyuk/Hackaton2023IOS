@@ -39,7 +39,7 @@ final class TabBarCoordinator: Coordinator {
         presenter.present(tabViewController, animated: false)
         tabViewController.viewControllers = viewControllersInPresenter
 
-        myProfileNavigationController.tabBarItem = UITabBarItem(title: "My profile", image: nil, selectedImage: nil)
+        myProfileNavigationController.tabBarItem = UITabBarItem(title: "PDP", image: nil, selectedImage: nil)
         myProfileCoordinator = ProfileCoordinator(presenter: myProfileNavigationController)
         myProfileCoordinator?.start()
 
