@@ -8,10 +8,21 @@
 import Foundation
 
 struct SectionInfo {
-    struct Cell {
-        let title: String
-        let value: String
+    enum Cell {
+        case subCategoryCell(Category.SubCategory)
+        case textCell(String, String)
     }
     let title: String
     let cells: [Cell]
+
+    init(title: String, cells: [Cell]) {
+        self.title = title
+        self.cells = cells
+    }
+}
+
+enum Style {
+    case standard
+    case oneLine
+    case subtitle
 }

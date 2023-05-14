@@ -37,7 +37,7 @@ final class URLSessionAPIClient: APIClient {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             return try decoder.decode(T.Response.self, from: data)
         } catch {
-            throw APIError.invalidURL
+            throw error
         }
     }
 }

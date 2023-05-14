@@ -8,82 +8,65 @@
 import Foundation
 
 struct User: Decodable {
-    struct PersonalInfo: Decodable {
-        let id: String
-        let firstName: String
-        let lastName: String
+    let firstName: String
+    let lastName: String
+    let title: String
+    let desiredTitle: String
+    let categories: [Category]
+}
+
+extension User {
+    static var defaultUser: User {
+        // swiftlint: disable all
+        let categories = [
+            Category(category: "Managerial", subCategories: [
+                Category.SubCategory(subCategory: "Prototyping", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Requirements Definition and Management", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Product Ownership", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Kanban", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Interviews", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Backlog management", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Use Cases and Scenarios", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Stakeholder List, Map, or Personas", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Stakeholder Management", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Brainstorming", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Estimation", current: .novice, required: .intermediate)
+            ]),
+            Category(category: "Practices", subCategories: [
+                Category.SubCategory(subCategory: "AT/Agile", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Requirements approval and prioritization awareness", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "UI Prototyping", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "BA Stakeholders management", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Engineering Maturity", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Vision", current: .novice, required: .intermediate)
+            ]),
+            Category(category: "Leadership & Soft Skills", subCategories: [
+                Category.SubCategory(subCategory: "Mentoring", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Roadmap", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Financial Awareness", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Problem-solving", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Client Relationship Management", current: .novice, required: .intermediate),
+                Category.SubCategory(subCategory: "Delivery Excellence", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Developing Others", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Meeting Facilitation", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Ownership", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Teamwork and Collaboration", current: .intermediate, required: .advanced),
+                Category.SubCategory(subCategory: "Market orientation", current: .advanced, required: .expert)
+            ]),
+            Category(category: "Technologies", subCategories: [
+                Category.SubCategory(subCategory: "Confluence", current: .novice, required: .intermediate),
+            ]),
+            Category(category: "Academic Disciplines", subCategories: [
+                Category.SubCategory(subCategory: "English", current: .advanced, required: .expert),
+            ]),
+        ]
+        // swiftlint: enable all
+        return User(
+            firstName: "Victor",
+            lastName: "Goban",
+            title: "Product Manager I",
+            desiredTitle: "Product Manager II",
+            categories: categories
+        )
     }
-
-    struct OrganizationalAttributes: Decodable {
-        let trackAndLevel: String
-        let title: String
-        let productionCategory: String
-        let organizationalCategory: String
-        let primarySkill: String
-        let employmentStatus: String
-        let unit: String
-        let startDate: String
-        let worksiteLocation: String
-    }
-
-    struct WorkExperience: Decodable {
-        let profileSummary: String
-        let experience: [Experience]
-
-        // swiftlint: disable nesting
-        struct Experience: Decodable {
-            let company: String
-            let customer: String
-            let startDate: String
-            let endDate: String
-            let project: String
-            let title: String
-            let projectRole: String
-            let teamSize: String
-            let database: String
-            let tools: String
-            let technologies: String
-        }
-    }
-
-    struct Skill: Decodable {
-        let category: String
-        let skill: String
-        let level: String
-    }
-
-    struct EducationAndTraining: Decodable {
-        let education: String
-        let trainingCourses: String
-    }
-
-    struct Certification: Decodable {
-        let certificateName: String
-        let certificateType: String
-        let issuer: String
-        let competencies: String
-        let status: String
-    }
-
-    struct Contribution: Decodable {
-        let category: String
-        let level: String
-        let description: String
-    }
-
-    struct Recognition: Decodable {
-        let category: String
-        let level: String
-        let description: String
-    }
-
-    let personalInfo: PersonalInfo
-    let organizationalAttributes: OrganizationalAttributes
-    let keySkills: [String]
-    let workExperience: WorkExperience
-    let skills: [Skill]
-    let educationAndTraining: EducationAndTraining
-    let certifications: [Certification]
-    let contributions: [Contribution]
-    let recognitions: [Recognition]
 }
