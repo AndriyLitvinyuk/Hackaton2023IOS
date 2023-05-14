@@ -28,6 +28,8 @@
 		CA9F3E0D2A111D2400C93E90 /* ScheduleRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */; };
 		CA9F3E102A111FBD00C93E90 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */; };
 		CA9F3E132A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */; };
+		CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; };
+		CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB6A8B732A0FA02F009CC728 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */; };
 		EB6A8B762A0FA06A009CC728 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */; };
 		EB6A8B792A0FA0AB009CC728 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */; };
@@ -44,20 +46,18 @@
 		EB85B9D42A11074000566234 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9D32A11074000566234 /* JsonReader.swift */; };
 		EB85B9E82A112D2400566234 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E72A112D2400566234 /* Date+Extensions.swift */; };
 		EB85B9EA2A1130AA00566234 /* RoadmapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB85B9E92A1130AA00566234 /* RoadmapViewModel.swift */; };
-		EB85B9EB2A11598F00566234 /* Ganttis.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; };
-		EB85B9EC2A11598F00566234 /* Ganttis.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB85B9DF2A11207700566234 /* Ganttis.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBA313252A0F9E4000A80328 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313242A0F9E4000A80328 /* Coordinator.swift */; };
 		EBA313272A0F9E8000A80328 /* DefaultFileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA313262A0F9E8000A80328 /* DefaultFileName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB85B9ED2A11598F00566234 /* Embed Frameworks */ = {
+		CA9F3E1A2A115BD700C93E90 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB85B9EC2A11598F00566234 /* Ganttis.xcframework in Embed Frameworks */,
+				CA9F3E192A115BD700C93E90 /* Ganttis.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +90,7 @@
 		CA9F3E0C2A111D2400C93E90 /* ScheduleRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestBody.swift; sourceTree = "<group>"; };
 		CA9F3E0F2A111FBD00C93E90 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		CA9F3E122A11384A00C93E90 /* Effective_Programming_for_America_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Effective_Programming_for_America_logo.svg.png; sourceTree = "<group>"; };
+		CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Ganttis.xcframework; path = Hackaton2023IOS/Ganttis/Ganttis.xcframework; sourceTree = "<group>"; };
 		EB6A8B722A0FA02F009CC728 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		EB6A8B752A0FA06A009CC728 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		EB6A8B782A0FA0AB009CC728 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -116,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB85B9EB2A11598F00566234 /* Ganttis.xcframework in Frameworks */,
+				CA9F3E182A115BD700C93E90 /* Ganttis.xcframework in Frameworks */,
 				057D519742D46325D28E1899 /* Pods_Hackaton2023IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				EB85B9DF2A11207700566234 /* Ganttis.xcframework */,
+				CA9F3E172A115BD700C93E90 /* Ganttis.xcframework */,
 				119A1E8CAC018DF5A6B0D72F /* Pods_Hackaton2023IOS.framework */,
 			);
 			name = Frameworks;
@@ -403,7 +405,7 @@
 				CA944D0C2A0E91220095AEEB /* Resources */,
 				ACA553DC5DB240E3B3284370 /* [CP] Embed Pods Frameworks */,
 				CA2410982A0F75D90068CFCA /* SwiftLint */,
-				EB85B9ED2A11598F00566234 /* Embed Frameworks */,
+				CA9F3E1A2A115BD700C93E90 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
