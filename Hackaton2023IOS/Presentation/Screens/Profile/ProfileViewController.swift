@@ -17,7 +17,7 @@ final class ProfileViewController: UIViewController, StoryboardInstantiable {
 
     private var cancellables = Set<AnyCancellable>()
     private var tableView: ProfileTableView?
-    private var profileViewControllerDataSource: ProfileViewControllerDataSource?
+    private var profileViewControllerTableModel: ProfileViewControllerTableModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ final class ProfileViewController: UIViewController, StoryboardInstantiable {
 private extension ProfileViewController {
 
     func createTableView() {
-        profileViewControllerDataSource = ProfileViewControllerDataSource()
+        profileViewControllerTableModel = ProfileViewControllerTableModel()
         tableView = ProfileTableView(frame: view.frame, style: .insetGrouped)
         if let tableView = tableView {
-            profileViewControllerDataSource?.profileTableView = tableView
-            tableView.allowsSelection = false
-            tableView.dataSource = profileViewControllerDataSource
+            profileViewControllerTableModel?.profileTableView = tableView
+            tableView.dataSource = profileViewControllerTableModel
+            tableView.delegate = profileViewControllerTableModel
             view.addSubview(tableView)
         }
     }

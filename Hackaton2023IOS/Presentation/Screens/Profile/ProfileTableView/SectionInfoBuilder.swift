@@ -40,9 +40,10 @@ private extension SectionInfoBuilder {
         .init(
             title: "Personal Info",
             cells: [
-                .init(title: "First Name", value: user.personalInfo.firstName),
-                .init(title: "Last Name", value: user.personalInfo.lastName)
-            ]
+                .init(title: "Name", value: user.personalInfo.firstName + " " + user.personalInfo.lastName ),
+                .init(title: "URL", value: "https:example.com", isInteractionEnabled: true)
+            ],
+            style: .subtitle
         )
     }
 
@@ -127,7 +128,7 @@ private extension SectionInfoBuilder {
                 .init(
                     title: $0.certificateName,
                     value: """
-\($0.certificateType), Issuer: \($0.issuer), Competencies: \($0.competencies), Status: \($0.status)
+\($0.certificateType)\nIssuer: \($0.issuer)\nCompetencies: \($0.competencies)\nStatus: \($0.status)
 """
                 )
             }
@@ -138,7 +139,7 @@ private extension SectionInfoBuilder {
         .init(title: "Contributions", cells: user.contributions.map { contribution in
             SectionInfo.Cell(
                 title: contribution.category,
-                value: "\(contribution.level) - \(contribution.description)"
+                value: "\(contribution.level): \(contribution.description)"
             )
         })
     }
@@ -147,7 +148,7 @@ private extension SectionInfoBuilder {
         .init(title: "Recognitions", cells: user.recognitions.map { recognition in
             SectionInfo.Cell(
                 title: recognition.category,
-                value: "\(recognition.level) - \(recognition.description)"
+                value: "\(recognition.level): \(recognition.description)"
             )
         })
     }
