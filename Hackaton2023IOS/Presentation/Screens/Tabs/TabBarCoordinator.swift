@@ -32,6 +32,8 @@ final class TabBarCoordinator: Coordinator {
         tabViewController = UITabBarController()
         tabViewController.tabBar.barTintColor = .black
         tabViewController.tabBar.backgroundColor = .white
+        tabViewController.tabBar.layer.borderColor = UIColor.lightGray.cgColor
+        tabViewController.tabBar.layer.borderWidth = 1
     }
 
     func start() {
@@ -39,20 +41,29 @@ final class TabBarCoordinator: Coordinator {
         presenter.present(tabViewController, animated: false)
         tabViewController.viewControllers = viewControllersInPresenter
 
-        myProfileNavigationController.tabBarItem = UITabBarItem(title: "PDP", image: nil, selectedImage: nil)
+        myProfileNavigationController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "person.fill"),
+            selectedImage: nil
+        )
         myProfileCoordinator = ProfileCoordinator(presenter: myProfileNavigationController)
         myProfileCoordinator?.start()
 
         peopleSearchNavigationController.tabBarItem = UITabBarItem(
-            title: "People search",
-            image: nil,
+            title: nil,
+            image: UIImage(systemName: "chart.bar.doc.horizontal.fill"),
             selectedImage: nil
         )
         peopleSearchCoordinator = PeopleSearchCoordinator(presenter: peopleSearchNavigationController)
         peopleSearchCoordinator?.start()
 
-        historyNavigationController.tabBarItem = UITabBarItem(title: "History", image: nil, selectedImage: nil)
+        historyNavigationController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(systemName: "archivebox.fill"),
+            selectedImage: nil
+        )
         historyCoordinator = HistoryCoordinator(presenter: historyNavigationController)
+        tabViewController.selectedIndex = 1
         historyCoordinator?.start()
     }
 }
