@@ -37,6 +37,8 @@ final class ProfileSubCategoryTableViewCell: UITableViewCell {
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
         ])
         categoryLabel.font = .boldSystemFont(ofSize: categoryLabel.font.pointSize)
+        categoryLabel.numberOfLines = 0
+        categoryLabel.sizeToFit()
     }
 
     required init?(coder: NSCoder) {
