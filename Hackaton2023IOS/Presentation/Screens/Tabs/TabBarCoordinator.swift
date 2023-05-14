@@ -32,8 +32,10 @@ final class TabBarCoordinator: Coordinator {
         tabViewController = UITabBarController()
         tabViewController.tabBar.barTintColor = .black
         tabViewController.tabBar.backgroundColor = .white
-        tabViewController.tabBar.layer.borderColor = UIColor.lightGray.cgColor
-        tabViewController.tabBar.layer.borderWidth = 1
+        tabViewController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabViewController.tabBar.layer.shadowRadius = 6
+        tabViewController.tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabViewController.tabBar.layer.shadowOpacity = 0.3
     }
 
     func start() {
